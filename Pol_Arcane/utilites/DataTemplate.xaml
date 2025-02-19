@@ -14,4 +14,16 @@
         <view:Weapons />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:SkillsVM}">
+        <view:Skills />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:MapsVM}">
+        <view:Maps />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ArmorsVM}">
+        <view:Armors />
+    </DataTemplate>
+
 </ResourceDictionary>

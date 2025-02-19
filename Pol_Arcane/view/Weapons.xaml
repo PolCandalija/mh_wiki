@@ -8,8 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800"
              xmlns:vm="clr-namespace:mh.viewModel">
     <Grid>
-        <Border CornerRadius="0,20,20,0">
-
+        <Border Background="Transparent"
+CornerRadius="0,20,20,0">
+            <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
 
         <TextBlock Text="Id  :"

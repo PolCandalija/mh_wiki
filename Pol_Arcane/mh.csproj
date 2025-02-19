@@ -298,9 +298,6 @@
     <Resource Include="images\shutdown_mo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\test1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\main_menu.png" />
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +305,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\mh_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\section_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

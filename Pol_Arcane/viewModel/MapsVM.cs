@@ -7,7 +7,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Pol_Arcane.view;
+using mh.view;
 
 namespace mh.viewModel
 {

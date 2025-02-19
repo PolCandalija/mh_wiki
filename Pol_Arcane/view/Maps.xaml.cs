@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Pol_Arcane.view
+namespace mh.view
 {
     /// <summary>
     /// Lógica de interacción para Maps.xaml
     /// </summary>
-    public partial class Maps : Page
+    public partial class Maps : UserControl
     {
         public Maps()
         {

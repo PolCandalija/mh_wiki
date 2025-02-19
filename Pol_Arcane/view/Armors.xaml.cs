@@ -13,12 +13,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Pol_Arcane.view
+namespace mh.view
 {
     /// <summary>
     /// Lógica de interacción para Armors.xaml
     /// </summary>
-    public partial class Armors : Page
+    public partial class Armors : UserControl
     {
         public Armors()
         {
