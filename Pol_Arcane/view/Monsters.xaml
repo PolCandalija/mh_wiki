@@ -15,42 +15,42 @@ CornerRadius="0,20,20,0">
         </Border>
 
         <TextBlock Text="Id  :"
-         Foreground="#DBDBDB"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"
          Margin="72,146,0,0" />
 
         <TextBlock Text="{Binding Monster_Id}"
-         Foreground="#CED565"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"
          Margin="198,148,0,0" RenderTransformOrigin="0.55,2.719" />
 
         <TextBlock Text="Name  :"
-         Foreground="#DBDBDB"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"
          Margin="72,205,0,0" RenderTransformOrigin="0.517,3.333" />
 
         <TextBlock Text="{Binding Monster_Name}"
-         Foreground="#CED565"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"
          Margin="198,205,0,0" RenderTransformOrigin="0.55,2.719" />
 
         <TextBlock Text="Race  :"
-         Foreground="#DBDBDB"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"
          Margin="72,266,0,0" />
 
         <TextBlock Text="{Binding Monster_Type}"
-         Foreground="#CED565"
+         Foreground="Black"
          FontSize="20"
          HorizontalAlignment="Left"
          VerticalAlignment="Top"

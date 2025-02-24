@@ -14,49 +14,49 @@ CornerRadius="0,20,20,0">
         </Border>
 
         <TextBlock Text="Id  :"
- Foreground="#DBDBDB"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  Margin="72,146,0,0" />
 
         <TextBlock Text="{Binding Weapon_Id}"
- Foreground="#CED565"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  Margin="198,148,0,0" RenderTransformOrigin="0.55,2.719" />
 
         <TextBlock Text="Type  :"
- Foreground="#DBDBDB"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  Margin="72,205,0,0" RenderTransformOrigin="0.517,3.333" />
 
         <TextBlock Text="{Binding Weapon_Type}"
- Foreground="#CED565"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  Margin="198,205,0,0" RenderTransformOrigin="0.55,2.719" />
 
         <TextBlock Text="Damage  :"
- Foreground="#DBDBDB"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  Margin="72,266,0,0" />
 
         <TextBlock Text="{Binding Weapon_RawDamage}"
- Foreground="#CED565"
+ Foreground="Black"
  FontSize="20"
  HorizontalAlignment="Left"
  VerticalAlignment="Top"
  FontFamily="/Fonts/#Rubik Medium"
  Margin="198,269,0,0" RenderTransformOrigin="0.55,2.719" />
         <TextBlock Text="Range  :"
-Foreground="#DBDBDB"
+Foreground="Black"
 FontSize="20"
 HorizontalAlignment="Left"
 VerticalAlignment="Top"

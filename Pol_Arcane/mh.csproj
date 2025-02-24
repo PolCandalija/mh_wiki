@@ -318,9 +318,6 @@
     <Resource Include="images\yellow_arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\close_button\yellow_cross1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\close_button\red_cross_small.png" />
     <Resource Include="images\close_button\yellow_cross_small.png" />
   </ItemGroup>

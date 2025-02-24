@@ -12,6 +12,7 @@
         Width="1060"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
         WindowStyle="None"
         Background="Transparent">
 
@@ -19,50 +20,57 @@
         <vm:NavigationVM/>
     </Window.DataContext>
     <Grid>
-        <!--// Window Border //-->
-        <Border Background="#212529"
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" MouseDown="Border_MouseDown" Background="Black">
+        </Border>
+        <Grid Grid.Row="1">
+            <!--// Window Border //-->
+            <Border Background="#212529"
                 CornerRadius="20" />
-        <Grid>
-            <!--// Base Grid //-->
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="228" />
-                <ColumnDefinition Width="622" />
-            </Grid.ColumnDefinitions>
+            <Grid>
+                <!--// Base Grid //-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="228" />
+                    <ColumnDefinition Width="622" />
+                </Grid.ColumnDefinitions>
 
-            <!--// Navigation Panel //-->
-            <Grid HorizontalAlignment="Left" Panel.ZIndex="1"
+                <!--// Navigation Panel //-->
+                <Grid HorizontalAlignment="Left" Panel.ZIndex="1"
                   Width="228">
-                <Border Background="Transparent"
+                    <Border Background="Transparent"
                         CornerRadius="20,0,0,20">
-                    <Image Source="/images/main_menu.png" Stretch="Fill"/>
-                </Border>
+                        <Image Source="/images/main_menu.png" Stretch="Fill"/>
+                    </Border>
 
-                <StackPanel Height="400"
+                    <StackPanel Height="400"
                             Width="228">
 
-                    <!--// Home //-->
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <!--// Home //-->
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
                               Command="{Binding HomeCommand}"
                               IsChecked="True">
 
-                            <Grid>
-                                <Image Source="/images/mh_logo.png" Margin="0,-77,0,0"/>
-                            </Grid>
+                                <Grid>
+                                    <Image Source="/images/mh_logo.png" Margin="0,-77,0,0"/>
+                                </Grid>
 
-                        </Menu:Btn>
+                            </Menu:Btn>
 
-                    </Grid>
+                        </Grid>
 
-                    <!--// Players //-->
+                        <!--// Players //-->
 
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
                         Command="{Binding MonsterCommand}">
 
-                            <Grid>
+                                <Grid>
 
-                                <Image Source="/images/menu_signs/monsters_sign.jpg"
+                                    <Image Source="/images/menu_signs/monsters_sign.jpg"
                                 Style="{StaticResource Image_Style}" 
                                        Height="25" 
                                        Width="206" 
@@ -70,22 +78,22 @@
                                        VerticalAlignment="Top" 
                                        HorizontalAlignment="Center" />
 
-                            </Grid>
+                                </Grid>
 
-                        </Menu:Btn>
+                            </Menu:Btn>
 
-                    </Grid>
+                        </Grid>
 
 
-                    <!--// Weapons //-->
+                        <!--// Weapons //-->
 
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
                             Command="{Binding WeaponCommand}">
 
-                            <Grid>
+                                <Grid>
 
-                                <Image Source="/images/menu_signs/weapons_sign.jpg"
+                                    <Image Source="/images/menu_signs/weapons_sign.jpg"
 Style="{StaticResource Image_Style}" 
        Height="25" 
        Width="206" 
@@ -93,20 +101,20 @@ Style="{StaticResource Image_Style}"
        VerticalAlignment="Top" 
        HorizontalAlignment="Center" />
 
-                            </Grid>
+                                </Grid>
 
-                        </Menu:Btn>
-                    </Grid>
+                            </Menu:Btn>
+                        </Grid>
 
-                    <!--// Armor sets //-->
+                        <!--// Armor sets //-->
 
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
         Command="{Binding ArmorCommand}">
 
-                            <Grid>
+                                <Grid>
 
-                                <Image Source="/images/menu_signs/armor_sign.jpg"
+                                    <Image Source="/images/menu_signs/armor_sign.jpg"
 Style="{StaticResource Image_Style}" 
        Height="25" 
        Width="206" 
@@ -114,20 +122,20 @@ Style="{StaticResource Image_Style}"
        VerticalAlignment="Top" 
        HorizontalAlignment="Center" />
 
-                            </Grid>
+                                </Grid>
 
-                        </Menu:Btn>
-                    </Grid>
+                            </Menu:Btn>
+                        </Grid>
 
-                    <!--// Skills //-->
+                        <!--// Skills //-->
 
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
         Command="{Binding SkillCommand}">
 
-                            <Grid>
+                                <Grid>
 
-                                <Image Source="/images/menu_signs/skills_sign.jpg"
+                                    <Image Source="/images/menu_signs/skills_sign.jpg"
 Style="{StaticResource Image_Style}" 
        Height="25" 
        Width="206" 
@@ -135,20 +143,20 @@ Style="{StaticResource Image_Style}"
        VerticalAlignment="Top" 
        HorizontalAlignment="Center" />
 
-                            </Grid>
+                                </Grid>
 
-                        </Menu:Btn>
-                    </Grid>
+                            </Menu:Btn>
+                        </Grid>
 
-                    <!--// Maps //-->
+                        <!--// Maps //-->
 
-                    <Grid>
-                        <Menu:Btn Style="{StaticResource BtnStyle}"
+                        <Grid>
+                            <Menu:Btn Style="{StaticResource BtnStyle}"
         Command="{Binding MapCommand}">
 
-                            <Grid>
+                                <Grid>
 
-                                <Image Source="/images/menu_signs/maps_sign.jpg"
+                                    <Image Source="/images/menu_signs/maps_sign.jpg"
 Style="{StaticResource Image_Style}" 
        Height="25" 
        Width="206" 
@@ -156,22 +164,24 @@ Style="{StaticResource Image_Style}"
        VerticalAlignment="Top" 
        HorizontalAlignment="Center" />
 
-                            </Grid>
+                                </Grid>
 
-                        </Menu:Btn>
-                    </Grid>
+                            </Menu:Btn>
+                        </Grid>
 
-                </StackPanel>
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Grid.Column="1" Panel.ZIndex="0" Margin="0,0,-210,0">
+                    <ContentControl x:Name="Page" Content="{Binding CurrentView}"/>
+
+                </Grid>
 
             </Grid>
-
-            <Grid Grid.Column="1" Panel.ZIndex="0" Margin="0,0,-210,0">
-                <ContentControl x:Name="Page" Content="{Binding CurrentView}"/>
-
-            </Grid>
-
+            <Button x:Name="CloseApp" Click="CloseApp_Click" Style="{StaticResource ExitApp}"></Button>
         </Grid>
-        <Button x:Name="CloseApp" Click="CloseApp_Click" Style="{StaticResource ExitApp}"></Button>
     </Grid>
+    
 
 </Window>
