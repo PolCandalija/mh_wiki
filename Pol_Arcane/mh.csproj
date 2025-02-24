@@ -107,8 +107,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="datasource\DBDatasource.cs" />
     <Compile Include="model\Armor.cs" />
-    <Compile Include="model\Game.cs" />
     <Compile Include="model\Map.cs" />
     <Compile Include="model\Skill.cs" />
     <Compile Include="model\Weapon.cs" />

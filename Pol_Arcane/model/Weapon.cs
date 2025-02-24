@@ -15,5 +15,6 @@ namespace mh.model
         public string Element { get; set; }
         public int ElementDamage { get; set; }
         public string Sharpness { get; set; }
+        public string IconUrl { get; set; }
     }
 }

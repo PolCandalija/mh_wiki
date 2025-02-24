@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using mh.datasource;
 
 namespace mh.viewModel
 {
@@ -81,41 +82,27 @@ namespace mh.viewModel
         }
         
 
-        public MonstersVM(int playerId)
+        public MonstersVM(int _id)
         {
             monster = new Monster();
 
-            string consulta = "SELECT * FROM Monster WHERE _id=@pId";
+            DataTable dataTable = new DataTable();
 
-            MySqlCommand sqlComanda = new MySqlCommand(consulta, MainWindow.elservidorSqlConnection);
+            dataTable = DBDatasource.GetDataById("Monster", _id);
 
-            MySqlDataAdapter elMeuAdaptador = new MySqlDataAdapter(sqlComanda);
-            using (elMeuAdaptador)
+            if (dataTable.Rows.Count > 0)
             {
-
-                sqlComanda.Parameters.AddWithValue("@pId", playerId);
-
-                DataTable ordersTable = new DataTable();
-                elMeuAdaptador.Fill(ordersTable);
-                if (ordersTable.Rows.Count > 0)
-                {
-                    int id = Convert.ToInt32(ordersTable.Rows[0]["_id"]);
-                    string name = Convert.ToString(ordersTable.Rows[0]["Name"]);
-                    string race = Convert.ToString(ordersTable.Rows[0]["Type"]);
-                    int orderid = Convert.ToInt32(ordersTable.Rows[0]["WeaponId"]);
-
-                    Monster_Id = id;
-                    Monster_Name = name;
-                    Monster_Type = race;
-                    Monster_Id = orderid;
-                }
-                else
-                {
-                    Monster_Id = -1;
-                    Monster_Name = "null";
-                    Monster_Type = "null";
-                    Monster_Id = -1;
-                }
+                Monster_Id = Convert.ToInt32(dataTable.Rows[0]["_id"]);
+                Monster_Name = Convert.ToString(dataTable.Rows[0]["Name"]);
+                Monster_Type = Convert.ToString(dataTable.Rows[0]["Type"]);
+                Monster_Id = Convert.ToInt32(dataTable.Rows[0]["WeaponId"]);
+            }
+            else
+            {
+                Monster_Id = -1;
+                Monster_Name = "null";
+                Monster_Type = "null";
+                Monster_Id = -1;
             }
         }
     }

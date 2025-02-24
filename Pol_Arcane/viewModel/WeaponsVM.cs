@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using mh.datasource;
 
 namespace mh.viewModel
 {
@@ -58,7 +59,7 @@ namespace mh.viewModel
             
             string consulta = "SELECT * FROM Monster WHERE _id=@pId";
 
-            MySqlCommand sqlComanda = new MySqlCommand(consulta, MainWindow.elservidorSqlConnection);
+            MySqlCommand sqlComanda = new MySqlCommand(consulta, DBDatasource.DBConnection);
 
             MySqlDataAdapter elMeuAdaptador = new MySqlDataAdapter(sqlComanda);
             using (elMeuAdaptador)
@@ -82,7 +83,7 @@ namespace mh.viewModel
             {
                 consulta = "SELECT * FROM Weapon WHERE _id=@wId";
 
-                sqlComanda = new MySqlCommand(consulta, MainWindow.elservidorSqlConnection);
+                sqlComanda = new MySqlCommand(consulta, DBDatasource.DBConnection);
 
                 elMeuAdaptador = new MySqlDataAdapter(sqlComanda);
                 using (elMeuAdaptador)

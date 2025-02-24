@@ -21,6 +21,7 @@ namespace mh.model
         public int ThunderRes { get; set; }
         public int DragonRes { get; set; }
         public string Type { get; set; }
+        public string IconUrl { get; set; }
 
     }
 }

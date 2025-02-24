@@ -1,6 +1,8 @@
-﻿using MySql.Data.MySqlClient;
+﻿using mh.datasource;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,8 +24,6 @@ namespace mh
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static SqlConnection mySqlConnection = new SqlConnection("Data Source=POL;Initial Catalog=pol_arcane;Integrated Security=True");
-        public static MySqlConnection elservidorSqlConnection = new MySqlConnection("Server=ellaboratori.cat;Database=pol;User ID=pol;Password=pol*;SslMode=none");
 
         public MainWindow()
         {
@@ -32,6 +32,7 @@ namespace mh
 
         private void CloseApp_Click(object sender, RoutedEventArgs e)
         {
+            DBDatasource.DBConnection.Close();
             Close();
         }
 

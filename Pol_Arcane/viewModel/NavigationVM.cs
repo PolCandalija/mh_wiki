@@ -10,7 +10,7 @@ namespace mh.viewModel
 {
     class NavigationVM : ViewModelBase
     {
-        public string _monsterId = "2";
+        public string _monsterId = "10";
 
         private object _currentView;
         public object CurrentView
