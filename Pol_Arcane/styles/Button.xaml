@@ -21,19 +21,27 @@
 
                         <Border.Background>
                             <SolidColorBrush x:Name="BorderBackground"
-                                     Color="Transparent" />
+                            Color="Transparent" />
                         </Border.Background>
 
                         <Grid>
-
                             <Border x:Name="Indicator"
                             Height="35"
-                            Width="4"
+                            
+                            HorizontalAlignment="Stretch"
+                            VerticalAlignment="Stretch"
+                            Opacity="0.5"
+                            Background="#231815"
+                            Visibility="Collapsed"/>
+
+                            <Image x:Name="imgtest"
+                            Source="/images/yellow_arrow.png"
+                            Visibility="Hidden"
                             HorizontalAlignment="Left"
-                            VerticalAlignment="Center"
-                            Background="#FFFFFF"
-                            Visibility="Collapsed"
-                            CornerRadius="2" />
+                            Width="25"
+                            Height="25"
+    
+    />
 
                             <ContentPresenter />
 
@@ -43,20 +51,11 @@
 
                     <ControlTemplate.Triggers>
 
-                        <Trigger Property="IsMouseOver"
-                         Value="True">
-
-                            <Setter Property="Visibility"
-                            TargetName="Indicator"
-                            Value="Visible" />
-
-                        </Trigger>
-
                         <Trigger Property="IsFocused"
                             Value="True">
 
                             <Setter Property="Visibility"
-                             TargetName="Indicator"
+                             TargetName="imgtest"
                              Value="Visible" />
 
                         </Trigger>
@@ -70,11 +69,11 @@
     </Style>
 
     <ImageBrush x:Key="close_app_def"
-        ImageSource="/Images/shutdown_def.png"
+        ImageSource="/images/close_button/yellow_cross_small.png"
         Stretch="None" />
 
     <ImageBrush x:Key="close_app_mo"
-        ImageSource="/Images/shutdown_mo.png"
+        ImageSource="/images/close_button/red_cross_small.png"
         Stretch="None" />
 
     <Style x:Key="ExitApp"

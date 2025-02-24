@@ -292,8 +292,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\img_players.png" />
-    <Resource Include="images\img_weapons.png" />
     <Resource Include="images\shutdown_def.png" />
     <Resource Include="images\shutdown_mo.png" />
   </ItemGroup>
@@ -308,6 +306,23 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\section_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\menu_signs\armor_sign.jpg" />
+    <Resource Include="images\menu_signs\maps_sign.jpg" />
+    <Resource Include="images\menu_signs\monsters_sign.jpg" />
+    <Resource Include="images\menu_signs\skills_sign.jpg" />
+    <Resource Include="images\menu_signs\weapons_sign.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\yellow_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\close_button\yellow_cross1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\close_button\red_cross_small.png" />
+    <Resource Include="images\close_button\yellow_cross_small.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
