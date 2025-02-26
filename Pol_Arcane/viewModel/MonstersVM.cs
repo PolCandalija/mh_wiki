@@ -80,8 +80,40 @@ namespace mh.viewModel
             get { return monster.Type; }
             set { monster.Type = value; OnProperyChanged(); }
         }
-        
+        public string Monster_IconUrl
+        {
+            get { return monster.IconUrl; }
+            set { monster.IconUrl = value; OnProperyChanged(); }
+        }
 
+        private List<Monster> Monster_List;
+
+        public MonstersVM()
+        {
+            Monster_List = new List<Monster>();
+            DataTable dt = DBDatasource.GetData("Monster");
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Monster monster = new Monster();
+                monster._Id = Convert.ToInt32(dr["_Id"]);
+                monster.Name = Convert.ToString(dr["Name"]);
+                monster.Hr = Convert.ToInt32(dr["Hr"]);
+                monster.MapId = Convert.ToInt32(dr["MapId"]);
+                monster.ArmorId = Convert.ToInt32(dr["ArmorId"]);
+                monster.WeaponId = Convert.ToInt32(dr["WeaponId"]);
+                monster.Description = Convert.ToString(dr["Description"]);
+                monster.FireRes = Convert.ToInt32(dr["FireRes"]);
+                monster.WaterRes = Convert.ToInt32(dr["WaterRes"]);
+                monster.IceRes = Convert.ToInt32(dr["IceRes"]);
+                monster.ThunderRes = Convert.ToInt32(dr["ThunderRes"]);
+                monster.DragonRes = Convert.ToInt32(dr["DragonRes"]);
+                monster.Type = Convert.ToString(dr["Type"]);
+                monster.IconUrl = Convert.ToString(dr["IconUrl"]);
+
+                Monster_List.Add(monster);
+            }
+        }
         public MonstersVM(int _id)
         {
             monster = new Monster();
@@ -104,6 +136,13 @@ namespace mh.viewModel
                 Monster_Type = "null";
                 Monster_Id = -1;
             }
+        }
+
+        public List<Monster> GetMonsters()
+        {
+            MonstersVM monster = new MonstersVM();
+
+            return monster.Monster_List;
         }
     }
 }

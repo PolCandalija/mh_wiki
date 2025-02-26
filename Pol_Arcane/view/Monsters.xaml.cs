@@ -1,5 +1,8 @@
-﻿using System;
+﻿using mh.datasource;
+using mh.viewModel;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +23,9 @@ namespace mh.view
         public Monsters()
         {
             InitializeComponent();
+
+            MonstersVM monstersVM = new MonstersVM();
+            ListViewMonsters.ItemsSource = monstersVM.GetMonsters();
         }
     }
 }

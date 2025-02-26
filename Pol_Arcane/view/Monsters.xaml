@@ -13,50 +13,40 @@
 CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
-
-        <TextBlock Text="Id  :"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         Margin="72,146,0,0" />
-
-        <TextBlock Text="{Binding Monster_Id}"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         Margin="198,148,0,0" RenderTransformOrigin="0.55,2.719" />
-
-        <TextBlock Text="Name  :"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         Margin="72,205,0,0" RenderTransformOrigin="0.517,3.333" />
-
-        <TextBlock Text="{Binding Monster_Name}"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         Margin="198,205,0,0" RenderTransformOrigin="0.55,2.719" />
-
-        <TextBlock Text="Race  :"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         Margin="72,266,0,0" />
-
-        <TextBlock Text="{Binding Monster_Type}"
-         Foreground="Black"
-         FontSize="20"
-         HorizontalAlignment="Left"
-         VerticalAlignment="Top"
-         FontFamily="/Fonts/#Rubik Medium"
-         Margin="198,266,0,0" RenderTransformOrigin="0.55,2.719" />
-
+        
+        <ScrollViewer 
+            HorizontalAlignment="Center" 
+            Background="Transparent" 
+            Width="600" 
+            Height="450"
+            VerticalScrollBarVisibility="Hidden">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center">
+                <ItemsControl x:Name="ListViewMonsters">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Margin="10" Width="110" Height="160">
+                                <StackPanel>
+                                    <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                                        <Border.Effect>
+                                            <DropShadowEffect ShadowDepth="1"/>
+                                        </Border.Effect>
+                                        <Border.Background>
+                                            <ImageBrush ImageSource="{Binding Path=IconUrl}"/>
+                                        </Border.Background>
+                                    </Border>
+                                    <TextBlock Margin="5 0" Text="{Binding Path=Name}" FontSize="15"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 
