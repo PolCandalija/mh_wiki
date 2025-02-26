@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using mh.view;
+using mh.datasource;
 
 namespace mh.viewModel
 {
     internal class MapsVM : utilites.ViewModelBase
     {
+        public static string DBTable = "Map";
         private readonly Map map;
 
         public int Map_Id
@@ -36,11 +38,30 @@ namespace mh.viewModel
             set { map.NumberOfZones = value; OnProperyChanged(); }
         }
 
+        private List<Map> Map_List;
+
         public MapsVM()
         {
-            map = new Map();
+            Map_List = new List<Map>();
+            DataTable dt = DBDatasource.GetData(MapsVM.DBTable);
 
-            map.Name = string.Empty;
+            foreach (DataRow dr in dt.Rows)
+            {
+                Map map = new Map();
+                map._Id = Convert.ToInt32(dr["_Id"]);
+                map.Name = Convert.ToString(dr["Name"]);
+                map.Description = Convert.ToString(dr["Description"]);
+                map.NumberOfZones = Convert.ToInt32(dr["NumberOfZones"]);
+
+                Map_List.Add(map);
+            }
+        }
+
+        public List<Map> GetMaps()
+        {
+            MapsVM maps = new MapsVM();
+
+            return maps.Map_List;
         }
     }
 }

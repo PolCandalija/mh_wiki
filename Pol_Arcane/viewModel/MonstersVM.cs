@@ -13,6 +13,7 @@ namespace mh.viewModel
 {
     public class MonstersVM : utilites.ViewModelBase
     {
+        public static string DBTable = "Monster";
         private readonly Monster monster;
 
         public int Monster_Id
@@ -91,7 +92,7 @@ namespace mh.viewModel
         public MonstersVM()
         {
             Monster_List = new List<Monster>();
-            DataTable dt = DBDatasource.GetData("Monster");
+            DataTable dt = DBDatasource.GetData(MonstersVM.DBTable);
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -120,7 +121,7 @@ namespace mh.viewModel
 
             DataTable dataTable = new DataTable();
 
-            dataTable = DBDatasource.GetDataById("Monster", _id);
+            dataTable = DBDatasource.GetDataById(MonstersVM.DBTable, _id);
 
             if (dataTable.Rows.Count > 0)
             {
@@ -140,9 +141,9 @@ namespace mh.viewModel
 
         public List<Monster> GetMonsters()
         {
-            MonstersVM monster = new MonstersVM();
+            MonstersVM monsters = new MonstersVM();
 
-            return monster.Monster_List;
+            return monsters.Monster_List;
         }
     }
 }

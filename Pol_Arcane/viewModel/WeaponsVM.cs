@@ -14,6 +14,7 @@ namespace mh.viewModel
 {
     internal class WeaponsVM : utilites.ViewModelBase
     {
+        public static string DBTable = "Weapon";
         private readonly Weapon weapon;
 
         public int Weapon_Id
@@ -50,6 +51,36 @@ namespace mh.viewModel
         {
             get { return weapon.Name; }
             set { weapon.Name = value; OnProperyChanged(); }
+        }
+
+        private List<Weapon> Weapon_List;
+
+        public WeaponsVM()
+        {
+            Weapon_List = new List<Weapon>();
+            DataTable dt = DBDatasource.GetData(WeaponsVM.DBTable);
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Weapon weapon = new Weapon();
+                weapon._Id = Convert.ToInt32(dr["_Id"]);
+                weapon.Name = Convert.ToString(dr["Name"]);
+                weapon.Type = Convert.ToString(dr["Type"]);
+                weapon.RawDamage = Convert.ToInt32(dr["RawDamage"]);
+                weapon.Element = Convert.ToString(dr["Element"]);
+                weapon.ElementDamage = Convert.ToInt32(dr["ElementDamage"]);
+                weapon.Sharpness = Convert.ToString(dr["Sharpness"]);
+
+
+                Weapon_List.Add(weapon);
+            }
+        }
+
+        public List<Weapon> GetWeapons()
+        {
+            WeaponsVM weapons = new WeaponsVM();
+
+            return weapons.Weapon_List;
         }
 
         public WeaponsVM(int playerId)
@@ -109,5 +140,7 @@ namespace mh.viewModel
             }
 
         }
+
+        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mh.model
 {
-    internal class Armor
+    public class Armor
     {
         public int _Id { get; set; }
         public int Defense { get; set; }

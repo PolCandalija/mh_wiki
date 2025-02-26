@@ -1,4 +1,5 @@
 ﻿using mh.model;
+using mh.viewModel;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace mh.datasource
         {
             if (table != "Armor" &&
                 table != "Map" &&
-                table != "Monster" &&
+                table != MonstersVM.DBTable &&
                 table != "Skill" &&
                 table != "Weapon")
             {

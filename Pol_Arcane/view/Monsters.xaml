@@ -16,15 +16,16 @@ CornerRadius="0,20,20,0">
         
         <ScrollViewer 
             HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
             Background="Transparent" 
             Width="600" 
-            Height="450"
+            Height="474"
             VerticalScrollBarVisibility="Hidden">
             <StackPanel Margin="0 0" HorizontalAlignment="Center">
                 <ItemsControl x:Name="ListViewMonsters">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="10" Width="110" Height="160">
+                            <Border Margin="0" Width="110" Height="160">
                                 <StackPanel>
                                     <Border Width="100" Height="100" CornerRadius="5" Margin="5">
                                         <Border.Effect>
