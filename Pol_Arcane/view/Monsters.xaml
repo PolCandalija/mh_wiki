@@ -18,14 +18,14 @@ CornerRadius="0,20,20,0">
             HorizontalAlignment="Center" 
             VerticalAlignment="Center"
             Background="Transparent" 
-            Width="600" 
+            Width="675" 
             Height="474"
             VerticalScrollBarVisibility="Hidden">
             <StackPanel Margin="0 0" HorizontalAlignment="Center">
                 <ItemsControl x:Name="ListViewMonsters">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="0" Width="110" Height="160">
+                            <Border Margin="0" Width="160" Height="160">
                                 <StackPanel>
                                     <Border Width="100" Height="100" CornerRadius="5" Margin="5">
                                         <Border.Effect>
@@ -35,7 +35,12 @@ CornerRadius="0,20,20,0">
                                             <ImageBrush ImageSource="{Binding Path=IconUrl}"/>
                                         </Border.Background>
                                     </Border>
-                                    <TextBlock Margin="5 0" Text="{Binding Path=Name}" FontSize="15"/>
+                                    <TextBlock Margin="5 0"
+                                       Text="{Binding Path=Name}"
+                                       FontSize="18"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
                                 </StackPanel>
                             </Border>
                         </DataTemplate>

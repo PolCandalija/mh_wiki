@@ -12,54 +12,207 @@
 CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+        <StackPanel
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Background="Transparent" 
+            Width="750" 
+            Height="361">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/c/c2/Great_Sword_Icon_White.png/revision/latest?cb=20160103031128"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Greatsword"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/e/e5/Sword_and_Shield_Icon_White.png/revision/latest?cb=20160103035907"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Sword Shield"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/9/99/Hammer_Icon_White.png/revision/latest?cb=20160103031541"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Hammer"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/7/74/Dual_Blades_Icon_White.png/revision/latest?cb=20160103030339"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Dual blades"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
 
-        <TextBlock Text="Id  :"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- Margin="72,146,0,0" />
 
-        <TextBlock Text="{Binding Weapon_Id}"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- Margin="198,148,0,0" RenderTransformOrigin="0.55,2.719" />
 
-        <TextBlock Text="Type  :"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- Margin="72,205,0,0" RenderTransformOrigin="0.517,3.333" />
 
-        <TextBlock Text="{Binding Weapon_Type}"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- Margin="198,205,0,0" RenderTransformOrigin="0.55,2.719" />
 
-        <TextBlock Text="Damage  :"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- Margin="72,266,0,0" />
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/1/1e/Long_Sword_Icon_White.png/revision/latest?cb=20160103034950"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Long Sword"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/0/0b/Lance_Icon_White.png/revision/latest?cb=20160103032841"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Lance"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/40/Switch_Axe_Icon_White.png/revision/latest?cb=20160103035713"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Switch axe"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/6/6c/Charge_Blade_Icon_White.png/revision/latest?cb=20160103031302"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Charge Blade"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
 
-        <TextBlock Text="{Binding Weapon_RawDamage}"
- Foreground="Black"
- FontSize="20"
- HorizontalAlignment="Left"
- VerticalAlignment="Top"
- FontFamily="/Fonts/#Rubik Medium"
- Margin="198,269,0,0" RenderTransformOrigin="0.55,2.719" />
-        <TextBlock Text="Range  :"
-Foreground="Black"
-FontSize="20"
-HorizontalAlignment="Left"
-VerticalAlignment="Top"
-Margin="72,322,0,0" />
+
+
+
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/47/Insect_Glaive_Icon_White.png/revision/latest?cb=20160103032407"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Insect Glaive"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+                <Border Margin="0" Width="160" Height="120">
+                    <StackPanel>
+                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border.Effect>
+                                <DropShadowEffect ShadowDepth="1"/>
+                            </Border.Effect>
+                            <Border.Background>
+                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/a/a4/Bow_Icon_White.png/revision/latest?cb=20160103030106"/>
+                            </Border.Background>
+                        </Border>
+                        <TextBlock Margin="5 0"
+                           Text="Bow"
+                           FontSize="16"
+                           FontFamily="{StaticResource CinzelFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

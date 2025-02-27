@@ -180,6 +180,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="styles\MyFont.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="styles\Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,6 +242,9 @@
     </EmbeddedResource>
     <Resource Include="fonts\Rubik-Medium.ttf" />
     <Resource Include="fonts\Rubik-Regular.ttf" />
+    <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Black.ttf" />
+    <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Bold.ttf" />
+    <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="pol_arcaneDataSet.xsc">
       <DependentUpon>pol_arcaneDataSet.xsd</DependentUpon>
@@ -320,6 +327,9 @@
   <ItemGroup>
     <Resource Include="images\close_button\red_cross_small.png" />
     <Resource Include="images\close_button\yellow_cross_small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fonts\Cinzel_Decorative\OFL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
