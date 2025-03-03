@@ -1,4 +1,5 @@
 ﻿using mh.utilites;
+using mh.view;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,19 +19,29 @@ namespace mh.viewModel
             get { return _currentView; }
             set { _currentView = value; OnProperyChanged(); }
         }
+
         public ICommand HomeCommand { get; set; }
         public ICommand MonsterCommand { get; set; }
         public ICommand WeaponCommand { get; set; }
         public ICommand ArmorCommand { get; set; }
         public ICommand SkillCommand { get; set; }
         public ICommand MapCommand { get; set; }
+        public ICommand WeaponsListCommand { get; set; }
 
         private void Home(object obj) => CurrentView = new HomeVM();
         private void Monster(object obj) => CurrentView = new MonstersVM();
-        private void Weapon(object obj) => CurrentView = new WeaponsVM(int.Parse(_monsterId));
+        private void Weapon(object obj) => CurrentView = new WeaponsVM();
         private void Armor(object obj) => CurrentView = new ArmorsVM();
         private void Skill(object obj) => CurrentView = new SkillsVM();
         private void Map(object obj) => CurrentView = new MapsVM();
+
+        private void WeaponsList(object obj)
+        {
+            if (obj is string type)
+            {
+                CurrentView = new WeaponsList(type);
+            }
+        }
 
         public NavigationVM()
         {
@@ -40,10 +51,10 @@ namespace mh.viewModel
             ArmorCommand = new RelayCommand(Armor);
             SkillCommand = new RelayCommand(Skill);
             MapCommand = new RelayCommand(Map);
+            WeaponsListCommand = new RelayCommand(WeaponsList);
 
             // Startup Page
             CurrentView = new HomeVM();
         }
     }
-
 }

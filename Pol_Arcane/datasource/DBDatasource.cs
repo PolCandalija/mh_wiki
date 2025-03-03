@@ -60,5 +60,19 @@ namespace mh.datasource
 
             return dataTable;
         }
+        public static DataTable GetWeaponsByType(string type)
+        {
+            string sqlPrompt = "SELECT * FROM Weapon WHERE Type=@type";
+
+            MySqlCommand sqlCommand = new MySqlCommand(sqlPrompt, DBConnection);
+            MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
+
+            sqlCommand.Parameters.AddWithValue("@type", type);
+
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
     }
 }

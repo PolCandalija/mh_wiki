@@ -3,10 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:mh.view"
+             xmlns:local="clr-namespace:mh"
+             xmlns:Menu="clr-namespace:mh.utilites"
+             xmlns:vm="clr-namespace:mh.viewModel"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             xmlns:vm="clr-namespace:mh.viewModel">
+             d:DesignHeight="450" d:DesignWidth="800">
+    
+    
+    <UserControl.DataContext>
+        <vm:NavigationVM/>
+    </UserControl.DataContext>
+    
+    
+    <UserControl.Resources>
+        <ResourceDictionary Source="/styles/MyButton.xaml"/>
+    </UserControl.Resources>
+    
+    
     <Grid>
         <Border Background="Transparent"
 CornerRadius="0,20,20,0">
@@ -21,81 +34,103 @@ CornerRadius="0,20,20,0">
 
             <!-- Row 1 -->
             <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+
                 <Border Margin="0" Width="160" Height="120">
                     <!-- gs -->
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/c/c2/Great_Sword_Icon_White.png/revision/latest?cb=20160103031128"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Greatsword"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Great Sword" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/c/c2/Great_Sword_Icon_White.png/revision/latest?cb=20160103031128"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Greatsword"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
+                    
                 </Border>
                 <!-- sns -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/e/e5/Sword_and_Shield_Icon_White.png/revision/latest?cb=20160103035907"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Sword Shield"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Sword and Shield" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/e/e5/Sword_and_Shield_Icon_White.png/revision/latest?cb=20160103035907"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Sword Shield"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- hammer -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/9/99/Hammer_Icon_White.png/revision/latest?cb=20160103031541"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Hammer"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Hammer" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/9/99/Hammer_Icon_White.png/revision/latest?cb=20160103031541"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Hammer"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- dual blades -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/7/74/Dual_Blades_Icon_White.png/revision/latest?cb=20160103030339"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Dual blades"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Dual Blades" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/7/74/Dual_Blades_Icon_White.png/revision/latest?cb=20160103030339"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Dual blades"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
             </StackPanel>
 
@@ -104,81 +139,102 @@ CornerRadius="0,20,20,0">
 
 
             <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+
+                <!-- Long sword -->
                 <Border Margin="0" Width="160" Height="120">
-                    <!-- Long sword -->
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/1/1e/Long_Sword_Icon_White.png/revision/latest?cb=20160103034950"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Long Sword"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Long Sword" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/1/1e/Long_Sword_Icon_White.png/revision/latest?cb=20160103034950"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Long Sword"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- Lance -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/0/0b/Lance_Icon_White.png/revision/latest?cb=20160103032841"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Lance"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Lance" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/0/0b/Lance_Icon_White.png/revision/latest?cb=20160103032841"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Lance"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- Switch axe -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/40/Switch_Axe_Icon_White.png/revision/latest?cb=20160103035713"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Switch axe"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Switch Axe" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/40/Switch_Axe_Icon_White.png/revision/latest?cb=20160103035713"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Switch axe"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- Charge blade -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/6/6c/Charge_Blade_Icon_White.png/revision/latest?cb=20160103031302"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Charge Blade"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Charge Blade" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/6/6c/Charge_Blade_Icon_White.png/revision/latest?cb=20160103031302"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Charge Blade"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
             </StackPanel>
 
@@ -186,43 +242,54 @@ CornerRadius="0,20,20,0">
             <!-- Row 3 -->
 
             <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+
+                <!-- Insect claive -->
                 <Border Margin="0" Width="160" Height="120">
-                    <!-- Insect claive -->
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/47/Insect_Glaive_Icon_White.png/revision/latest?cb=20160103032407"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Insect Glaive"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Insect Glaive" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/47/Insect_Glaive_Icon_White.png/revision/latest?cb=20160103032407"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Insect Glaive"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
                 <!-- Bow -->
                 <Border Margin="0" Width="160" Height="120">
-                    <StackPanel>
-                        <Border Width="80" Height="80" CornerRadius="5" Margin="5">
-                            <Border.Effect>
-                                <DropShadowEffect ShadowDepth="1"/>
-                            </Border.Effect>
-                            <Border.Background>
-                                <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/a/a4/Bow_Icon_White.png/revision/latest?cb=20160103030106"/>
-                            </Border.Background>
-                        </Border>
-                        <TextBlock Margin="5 0"
-                           Text="Bow"
-                           FontSize="16"
-                           FontFamily="{StaticResource CinzelFont}"
-                           TextAlignment="Center"
-                           TextWrapping="Wrap"/>
-                    </StackPanel>
+                    <Button CommandParameter="Bow"
+                            Command="{Binding DataContext.WeaponsListCommand, 
+                            RelativeSource={RelativeSource AncestorType=Window}}"
+                            Style="{StaticResource MyButton}">
+                        <StackPanel>
+                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                                <Border.Effect>
+                                    <DropShadowEffect ShadowDepth="1"/>
+                                </Border.Effect>
+                                <Border.Background>
+                                    <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/a/a4/Bow_Icon_White.png/revision/latest?cb=20160103030106"/>
+                                </Border.Background>
+                            </Border>
+                            <TextBlock Margin="5 0"
+                                       Text="Bow"
+                                       FontSize="16"
+                                       FontFamily="{StaticResource CinzelFont}"
+                                       TextAlignment="Center"
+                                       TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Button>
                 </Border>
             </StackPanel>
         </StackPanel>

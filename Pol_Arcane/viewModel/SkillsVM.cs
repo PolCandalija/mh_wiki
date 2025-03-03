@@ -19,7 +19,7 @@ namespace mh.viewModel
 
         private void LoadSkills()
         {
-            DataTable dt = DBDatasource.GetData(DBTable);
+            DataTable dt = DBDatasource.GetData(SkillsVM.DBTable);
 
             foreach (DataRow dr in dt.Rows)
             {

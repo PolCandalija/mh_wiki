@@ -141,6 +141,7 @@
     <Compile Include="viewModel\NavigationVM.cs" />
     <Compile Include="viewModel\MonstersVM.cs" />
     <Compile Include="viewModel\SkillsVM.cs" />
+    <Compile Include="viewModel\WeaponsListVM.cs" />
     <Compile Include="viewModel\WeaponsVM.cs" />
     <Compile Include="view\Armors.xaml.cs">
       <DependentUpon>Armors.xaml</DependentUpon>
@@ -160,6 +161,9 @@
     <Compile Include="view\Weapons.xaml.cs">
       <DependentUpon>Weapons.xaml</DependentUpon>
     </Compile>
+    <Compile Include="view\WeaponsList.xaml.cs">
+      <DependentUpon>WeaponsList.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -177,6 +181,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="styles\Image.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="styles\MyButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,6 +225,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\Weapons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\WeaponsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

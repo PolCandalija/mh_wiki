@@ -26,4 +26,8 @@
         <view:Armors />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:WeaponsListVM}">
+        <view:WeaponsList />
+    </DataTemplate>
+
 </ResourceDictionary>
