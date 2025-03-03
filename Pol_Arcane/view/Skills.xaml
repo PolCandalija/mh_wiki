@@ -11,5 +11,104 @@
 CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+
+        <Grid Width="675" Margin="62,57,62,54">
+            <!-- Header -->
+            <Border Background="Transparent" Padding="5" BorderThickness="1" BorderBrush="Black"
+            VerticalAlignment="Top">
+                <Grid Width="675">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="325"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Jewel" 
+                               FontWeight="Bold" 
+                               Grid.Column="0" 
+                               HorizontalAlignment="Center" 
+                               FontFamily="{StaticResource CinzelFont}"/>
+                    <TextBlock Text="Name" 
+                               FontWeight="Bold" 
+                               Grid.Column="1" 
+                               HorizontalAlignment="Center" 
+                               FontFamily="{StaticResource CinzelFont}"/>
+                    <TextBlock Text="Levels" 
+                               FontWeight="Bold" 
+                               Grid.Column="2" 
+                               HorizontalAlignment="Center" 
+                               FontFamily="{StaticResource CinzelFont}"/>
+                    <TextBlock Text="Description" 
+                               FontWeight="Bold" 
+                               Grid.Column="3" 
+                               HorizontalAlignment="Center" 
+                               FontFamily="{StaticResource CinzelFont}"/>
+                </Grid>
+            </Border>
+
+            <!-- Scroll -->
+            <ScrollViewer 
+                  VerticalScrollBarVisibility="Hidden"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Margin="0,30,0,0">
+                <StackPanel>
+                    <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Skills}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="0,0,0,1" BorderBrush="Gray" Width="675" Height="50">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="150"/>
+                                            <ColumnDefinition Width="100"/>
+                                            <ColumnDefinition Width="325"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- Icon -->
+                                        <Border Width="40" Height="40" CornerRadius="5" Margin="5" Grid.Column="0">
+                                            <Border.Effect>
+                                                <DropShadowEffect ShadowDepth="1"/>
+                                            </Border.Effect>
+                                            <Image Source="{Binding IconUrl}"/>
+
+                                        </Border>
+
+                                        <!-- Name -->
+                                        <TextBlock Text="{Binding Name}" 
+                                                   FontSize="14" 
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   TextAlignment="Center" Grid.Column="1"
+                                                   FontFamily="{StaticResource CinzelFont}"/>
+
+                                        <!-- Levels -->
+                                        <TextBlock Text="{Binding Levels}" 
+                                                   FontSize="14"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   TextAlignment="Center" Grid.Column="2"
+                                                   FontFamily="{StaticResource CinzelFont}"/>
+
+                                        <!-- Description -->
+                                        <TextBlock Text="{Binding Description}" 
+                                                   FontSize="12" 
+                                                   VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                   TextWrapping="Wrap" Grid.Column="3"
+                                                   FontFamily="{StaticResource CinzelFont}"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <StackPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+
     </Grid>
 </UserControl>

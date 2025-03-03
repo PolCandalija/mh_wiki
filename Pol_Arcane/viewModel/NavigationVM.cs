@@ -26,7 +26,7 @@ namespace mh.viewModel
         public ICommand MapCommand { get; set; }
 
         private void Home(object obj) => CurrentView = new HomeVM();
-        private void Monster(object obj) => CurrentView = new MonstersVM(int.Parse(_monsterId));
+        private void Monster(object obj) => CurrentView = new MonstersVM();
         private void Weapon(object obj) => CurrentView = new WeaponsVM(int.Parse(_monsterId));
         private void Armor(object obj) => CurrentView = new ArmorsVM();
         private void Skill(object obj) => CurrentView = new SkillsVM();

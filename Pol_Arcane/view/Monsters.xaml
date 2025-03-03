@@ -8,33 +8,33 @@
              d:DesignHeight="450" d:DesignWidth="800"
              xmlns:vm="clr-namespace:mh.viewModel">
     <Grid>
-
         <Border Background="Transparent"
-CornerRadius="0,20,20,0">
+                CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
-        
-        <ScrollViewer 
-            HorizontalAlignment="Center" 
-            VerticalAlignment="Center"
-            Background="Transparent" 
-            Width="675" 
-            Height="474"
-            VerticalScrollBarVisibility="Hidden">
+
+        <!-- Scroll -->
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Background="Transparent" Width="675" Height="474"
+                      VerticalScrollBarVisibility="Hidden">
             <StackPanel Margin="0 0" HorizontalAlignment="Center">
-                <ItemsControl x:Name="ListViewMonsters">
+                <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Monster_List}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border Margin="0" Width="160" Height="160">
+
+                                <!-- Monster -->
                                 <StackPanel>
+
+                                    <!-- Icon -->
                                     <Border Width="100" Height="100" CornerRadius="5" Margin="5">
                                         <Border.Effect>
                                             <DropShadowEffect ShadowDepth="1"/>
                                         </Border.Effect>
-                                        <Border.Background>
-                                            <ImageBrush ImageSource="{Binding Path=IconUrl}"/>
-                                        </Border.Background>
+                                        <Image Source="{Binding IconUrl}"/>
                                     </Border>
+
+                                    <!-- Name -->
                                     <TextBlock Margin="5 0"
                                        Text="{Binding Path=Name}"
                                        FontSize="18"
@@ -53,7 +53,5 @@ CornerRadius="0,20,20,0">
                 </ItemsControl>
             </StackPanel>
         </ScrollViewer>
-
     </Grid>
-
 </UserControl>
