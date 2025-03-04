@@ -3,14 +3,14 @@ using System.Windows.Controls;
 
 namespace mh.view
 {
-    public partial class WeaponsList : UserControl
+    public partial class MonsterDetails : UserControl
     {
-        public WeaponsList(string type)
+        public MonsterDetails(int id)
         {
             InitializeComponent();
-            DataContext = new WeaponsListVM(type);
+            DataContext = new MonsterDetailsVM(id);
         }
-        public WeaponsList()
+        public MonsterDetails()
         {
             InitializeComponent();
         }

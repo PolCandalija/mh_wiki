@@ -138,6 +138,7 @@
     <Compile Include="viewModel\ArmorsVM.cs" />
     <Compile Include="viewModel\HomeVM.cs" />
     <Compile Include="viewModel\MapsVM.cs" />
+    <Compile Include="viewModel\MonsterDetailsVM.cs" />
     <Compile Include="viewModel\NavigationVM.cs" />
     <Compile Include="viewModel\MonstersVM.cs" />
     <Compile Include="viewModel\SkillsVM.cs" />
@@ -151,6 +152,9 @@
     </Compile>
     <Compile Include="view\Maps.xaml.cs">
       <DependentUpon>Maps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="view\MonsterDetails.xaml.cs">
+      <DependentUpon>MonsterDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="view\Monsters.xaml.cs">
       <DependentUpon>Monsters.xaml</DependentUpon>
@@ -213,6 +217,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="view\Maps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="view\MonsterDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

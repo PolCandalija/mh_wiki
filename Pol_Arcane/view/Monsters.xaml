@@ -21,27 +21,32 @@
                 <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Monster_List}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            <Border Margin="0" Width="160" Height="160">
+                            <!-- Monster -->
+                            <Border Margin="0" Width="165" Height="200">
 
-                                <!-- Monster -->
-                                <StackPanel>
+                                <Button CommandParameter="1"
+                                        Command="{Binding DataContext.MonsterDetailsCommand, 
+                                        RelativeSource={RelativeSource AncestorType=Window}}"
+                                        Style="{StaticResource MyButton}">
+                                    <StackPanel>
 
-                                    <!-- Icon -->
-                                    <Border Width="100" Height="100" CornerRadius="5" Margin="5">
-                                        <Border.Effect>
-                                            <DropShadowEffect ShadowDepth="1"/>
-                                        </Border.Effect>
-                                        <Image Source="{Binding IconUrl}"/>
-                                    </Border>
+                                        <!-- Icon -->
+                                        <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding IconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
 
-                                    <!-- Name -->
-                                    <TextBlock Margin="5 0"
-                                       Text="{Binding Path=Name}"
-                                       FontSize="18"
-                                       FontFamily="{StaticResource CinzelFont}"
-                                       TextAlignment="Center"
-                                       TextWrapping="Wrap"/>
-                                </StackPanel>
+                                        <!-- Name -->
+                                        <TextBlock Margin="5 0"
+                                                   Text="{Binding Name}"
+                                                   FontSize="18"
+                                                   FontFamily="{StaticResource CinzelFont}"
+                                                   TextAlignment="Center"
+                                                   TextWrapping="Wrap"/>
+                                    </StackPanel>
+                                </Button>
                             </Border>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>

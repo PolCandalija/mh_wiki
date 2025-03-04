@@ -30,4 +30,8 @@
         <view:WeaponsList />
     </DataTemplate>
 
+    <DataTemplate DataType="{x:Type vm:MonsterDetailsVM}">
+        <view:MonsterDetails />
+    </DataTemplate>
+
 </ResourceDictionary>

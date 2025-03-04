@@ -16,7 +16,7 @@ CornerRadius="0,20,20,0">
             <!-- Header -->
             <Border Background="Transparent" 
                     Padding="5" 
-                    BorderThickness="1"
+                    BorderThickness="0,0,0,1"
                     BorderBrush="Black"
                     VerticalAlignment="Top"
                     CornerRadius="5,5,5,5">
@@ -36,17 +36,17 @@ CornerRadius="0,20,20,0">
                     <TextBlock Text="Name" 
                                FontWeight="Bold" 
                                Grid.Column="1" 
-                               HorizontalAlignment="Center" 
+                               HorizontalAlignment="Left" 
                                FontFamily="{StaticResource CinzelFont}"/>
                     <TextBlock Text="Levels" 
                                FontWeight="Bold" 
                                Grid.Column="2" 
-                               HorizontalAlignment="Center" 
+                               HorizontalAlignment="Left" 
                                FontFamily="{StaticResource CinzelFont}"/>
                     <TextBlock Text="Description" 
                                FontWeight="Bold" 
                                Grid.Column="3" 
-                               HorizontalAlignment="Center" 
+                               HorizontalAlignment="Left" 
                                FontFamily="{StaticResource CinzelFont}"/>
                 </Grid>
             </Border>
@@ -60,7 +60,7 @@ CornerRadius="0,20,20,0">
                     <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Skills}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <Border BorderThickness="0,0,0,1" BorderBrush="Gray" Width="675" Height="50">
+                                <Border BorderThickness="0,0,0,1" BorderBrush="#857a6a" Width="675" Height="50">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="100"/>
@@ -81,14 +81,14 @@ CornerRadius="0,20,20,0">
                                         <!-- Name -->
                                         <TextBlock Text="{Binding Name}" 
                                                    FontSize="14" 
-                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    TextAlignment="Center" Grid.Column="1"
                                                    FontFamily="{StaticResource CinzelFont}"/>
 
                                         <!-- Levels -->
                                         <TextBlock Text="{Binding Levels}" 
                                                    FontSize="14"
-                                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   VerticalAlignment="Center" HorizontalAlignment="Left"
                                                    TextAlignment="Center" Grid.Column="2"
                                                    FontFamily="{StaticResource CinzelFont}"/>
 

@@ -66,7 +66,7 @@
 
                         <Grid>
                             <Menu:Btn Style="{StaticResource BtnStyle}"
-                        Command="{Binding MonsterCommand}">
+                                        Command="{Binding MonsterCommand}">
 
                                 <Grid>
 
@@ -89,7 +89,7 @@
 
                         <Grid>
                             <Menu:Btn Style="{StaticResource BtnStyle}"
-                            Command="{Binding WeaponCommand}">
+                                        Command="{Binding WeaponCommand}">
 
                                 <Grid>
 
@@ -110,7 +110,7 @@
 
                         <Grid>
                             <Menu:Btn Style="{StaticResource BtnStyle}"
-        Command="{Binding ArmorCommand}">
+                                        Command="{Binding ArmorCommand}">
 
                                 <Grid>
 
@@ -131,17 +131,17 @@
 
                         <Grid>
                             <Menu:Btn Style="{StaticResource BtnStyle}"
-        Command="{Binding SkillCommand}">
+                                        Command="{Binding SkillCommand}">
 
                                 <Grid>
 
                                     <Image Source="/images/menu_signs/skills_sign.jpg"
-Style="{StaticResource Image_Style}" 
-       Height="25" 
-       Width="206" 
-       Margin="0,15,0,0" 
-       VerticalAlignment="Top" 
-       HorizontalAlignment="Center" />
+                                            Style="{StaticResource Image_Style}" 
+                                                   Height="25" 
+                                                   Width="206" 
+                                                   Margin="0,15,0,0" 
+                                                   VerticalAlignment="Top" 
+                                                   HorizontalAlignment="Center" />
 
                                 </Grid>
 
@@ -152,36 +152,17 @@ Style="{StaticResource Image_Style}"
 
                         <Grid>
                             <Menu:Btn Style="{StaticResource BtnStyle}"
-        Command="{Binding MapCommand}">
+                                        Command="{Binding MapCommand}"> 
 
                                 <Grid>
 
                                     <Image Source="/images/menu_signs/maps_sign.jpg"
-Style="{StaticResource Image_Style}" 
-       Height="25" 
-       Width="206" 
-       Margin="0,15,0,0" 
-       VerticalAlignment="Top" 
-       HorizontalAlignment="Center" />
-
-                                </Grid>
-
-                            </Menu:Btn>
-                        </Grid>
-
-                        <Grid>
-                            <Menu:Btn x:Name="TESTBUTTON" Style="{StaticResource BtnStyle}"
-        Command="{Binding WeaponsListCommand}">
-
-                                <Grid>
-
-                                    <Image Source="/images/menu_signs/maps_sign.jpg"
-Style="{StaticResource Image_Style}" 
-       Height="25" 
-       Width="206" 
-       Margin="0,15,0,0" 
-       VerticalAlignment="Top" 
-       HorizontalAlignment="Center" />
+                                            Style="{StaticResource Image_Style}" 
+                                                   Height="25" 
+                                                   Width="206" 
+                                                   Margin="0,15,0,0" 
+                                                   VerticalAlignment="Top" 
+                                                   HorizontalAlignment="Center" />
 
                                 </Grid>
 

@@ -27,6 +27,7 @@ namespace mh.viewModel
         public ICommand SkillCommand { get; set; }
         public ICommand MapCommand { get; set; }
         public ICommand WeaponsListCommand { get; set; }
+        public ICommand MonsterDetailsCommand { get; set; }
 
         private void Home(object obj) => CurrentView = new HomeVM();
         private void Monster(object obj) => CurrentView = new MonstersVM();
@@ -42,6 +43,13 @@ namespace mh.viewModel
                 CurrentView = new WeaponsList(type);
             }
         }
+        private void MonsterDetails(object obj)
+        {
+            if (obj is int id)
+            {
+                CurrentView = new MonsterDetails(id);
+            }
+        }
 
         public NavigationVM()
         {
@@ -52,6 +60,7 @@ namespace mh.viewModel
             SkillCommand = new RelayCommand(Skill);
             MapCommand = new RelayCommand(Map);
             WeaponsListCommand = new RelayCommand(WeaponsList);
+            MonsterDetailsCommand = new RelayCommand(MonsterDetails);
 
             // Startup Page
             CurrentView = new HomeVM();

@@ -13,7 +13,6 @@ namespace mh.viewModel
     public class WeaponsListVM : utilites.ViewModelBase
     {
         public ObservableCollection<Weapon> Weapons { get; set; }
-        public ICommand LoadWeaponsCommand { get; }
 
         public WeaponsListVM(string type)
         {
@@ -38,7 +37,8 @@ namespace mh.viewModel
                         RawDamage = Convert.ToInt32(dr["RawDamage"]),
                         Element = Convert.ToString(dr["Element"]),
                         ElementDamage = Convert.ToInt32(dr["ElementDamage"]),
-                        Sharpness = Convert.ToString(dr["Sharpness"])
+                        Sharpness = Convert.ToString(dr["Sharpness"]),
+                        IconUrl = Convert.ToString(dr["IconUrl"])
                     };
 
                     Weapons.Add(weapon);

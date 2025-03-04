@@ -13,8 +13,7 @@
     <UserControl.DataContext>
         <vm:NavigationVM/>
     </UserControl.DataContext>
-    
-    
+   
     <UserControl.Resources>
         <ResourceDictionary Source="/styles/MyButton.xaml"/>
     </UserControl.Resources>
@@ -36,9 +35,9 @@ CornerRadius="0,20,20,0">
             <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
 
                 <Border Margin="0" Width="160" Height="120">
-                    <!-- gs -->
-                    <Button CommandParameter="Great Sword" 
-                            Command="{Binding DataContext.WeaponsListCommand, 
+                    <!-- Great Sword -->
+                    <Button CommandParameter="1" 
+                            Command="{Binding DataContext.MonsterDetailsCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
@@ -46,6 +45,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/c/c2/Great_Sword_Icon_White.png/revision/latest?cb=20160103031128"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Greatsword"
@@ -57,7 +60,7 @@ CornerRadius="0,20,20,0">
                     </Button>
                     
                 </Border>
-                <!-- sns -->
+                <!-- Sword and Shield -->
                 <Border Margin="0" Width="160" Height="120">
                     <Button CommandParameter="Sword and Shield" 
                             Command="{Binding DataContext.WeaponsListCommand, 
@@ -68,6 +71,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/e/e5/Sword_and_Shield_Icon_White.png/revision/latest?cb=20160103035907"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Sword Shield"
@@ -89,6 +96,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/9/99/Hammer_Icon_White.png/revision/latest?cb=20160103031541"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Hammer"
@@ -110,6 +121,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/7/74/Dual_Blades_Icon_White.png/revision/latest?cb=20160103030339"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Dual blades"
@@ -139,6 +154,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/1/1e/Long_Sword_Icon_White.png/revision/latest?cb=20160103034950"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Long Sword"
@@ -160,6 +179,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/0/0b/Lance_Icon_White.png/revision/latest?cb=20160103032841"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Lance"
@@ -181,6 +204,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/40/Switch_Axe_Icon_White.png/revision/latest?cb=20160103035713"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Switch axe"
@@ -202,6 +229,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/6/6c/Charge_Blade_Icon_White.png/revision/latest?cb=20160103031302"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Charge Blade"
@@ -230,6 +261,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/47/Insect_Glaive_Icon_White.png/revision/latest?cb=20160103032407"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Insect Glaive"
@@ -251,6 +286,10 @@ CornerRadius="0,20,20,0">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/a/a4/Bow_Icon_White.png/revision/latest?cb=20160103030106"/>
                                 </Border.Background>
+
+                                <Border.BitmapEffect>
+                                    <DropShadowBitmapEffect ShadowDepth="7"/>
+                                </Border.BitmapEffect>
                             </Border>
                             <TextBlock Margin="5 0"
                                        Text="Bow"
