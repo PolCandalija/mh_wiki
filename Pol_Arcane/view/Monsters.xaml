@@ -15,16 +15,16 @@
 
         <!-- Scroll -->
         <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
-                      Background="Transparent" Width="675" Height="474"
+                      Background="Transparent" Width="680" Height="474"
                       VerticalScrollBarVisibility="Hidden">
             <StackPanel Margin="0 0" HorizontalAlignment="Center">
                 <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Monster_List}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <!-- Monster -->
-                            <Border Margin="0" Width="165" Height="200">
+                            <Border Margin="0" Width="170" Height="200">
 
-                                <Button CommandParameter="1"
+                                <Button CommandParameter="{Binding Name}"
                                         Command="{Binding DataContext.MonsterDetailsCommand, 
                                         RelativeSource={RelativeSource AncestorType=Window}}"
                                         Style="{StaticResource MyButton}">

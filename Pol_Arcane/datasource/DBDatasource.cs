@@ -74,5 +74,20 @@ namespace mh.datasource
 
             return dataTable;
         }
+
+        public static DataTable GetMonsterByName(string name)
+        {
+            string sqlPrompt = "SELECT * FROM Monster WHERE Name=@name";
+
+            MySqlCommand sqlCommand = new MySqlCommand(sqlPrompt, DBConnection);
+            MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlCommand);
+
+            sqlCommand.Parameters.AddWithValue("@name", name);
+
+            DataTable dataTable = new DataTable();
+            sqlDataAdapter.Fill(dataTable);
+
+            return dataTable;
+        }
     }
 }

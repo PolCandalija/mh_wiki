@@ -60,8 +60,8 @@
                             <!--// Home //-->
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                          Command="{Binding HomeCommand}"
-                          IsChecked="True">
+                                          Command="{Binding HomeCommand}"
+                                          IsChecked="True">
 
                                     <Grid>
                                         <Image Source="/images/mh_logo.png" Margin="0,-77,0,0"/>
@@ -80,12 +80,12 @@
                                     <Grid>
 
                                         <Image Source="/images/menu_signs/monsters_sign.jpg"
-                            Style="{StaticResource Image_Style}" 
-                                   Height="25" 
-                                   Width="206" 
-                                   Margin="0,15,0,0" 
-                                   VerticalAlignment="Top" 
-                                   HorizontalAlignment="Center" />
+                                                Style="{StaticResource Image_Style}" 
+                                                   Height="25" 
+                                                   Width="206" 
+                                                   Margin="0,15,0,0" 
+                                                   VerticalAlignment="Top" 
+                                                   HorizontalAlignment="Center" />
 
                                     </Grid>
 
@@ -103,12 +103,12 @@
                                     <Grid>
 
                                         <Image Source="/images/menu_signs/weapons_sign.jpg"
-                                       Style="{StaticResource Image_Style}" 
-                                       Height="25" 
-                                       Width="206" 
-                                       Margin="0,15,0,0" 
-                                       VerticalAlignment="Top" 
-                                       HorizontalAlignment="Center" />
+                                               Style="{StaticResource Image_Style}" 
+                                               Height="25" 
+                                               Width="206" 
+                                               Margin="0,15,0,0" 
+                                               VerticalAlignment="Top" 
+                                               HorizontalAlignment="Center" />
 
                                     </Grid>
 

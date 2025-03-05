@@ -5,10 +5,10 @@ namespace mh.view
 {
     public partial class MonsterDetails : UserControl
     {
-        public MonsterDetails(int id)
+        public MonsterDetails(string name)
         {
             InitializeComponent();
-            DataContext = new MonsterDetailsVM(id);
+            DataContext = new MonsterDetailsVM(name);
         }
         public MonsterDetails()
         {

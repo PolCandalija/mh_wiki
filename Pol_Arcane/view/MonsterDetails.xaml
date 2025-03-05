@@ -16,5 +16,31 @@
 CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+
+        <Grid Width="675" Margin="62,57,62,54">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228"/>
+                <ColumnDefinition Width="228"/>
+                <ColumnDefinition Width="228"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+
+                <!-- Icon -->
+                <Border Width="100" Height="100" CornerRadius="5" Margin="5">
+                    <Image Source="{Binding Monster.IconUrl}"/>
+                    <Border.BitmapEffect>
+                        <DropShadowBitmapEffect ShadowDepth="10"/>
+                    </Border.BitmapEffect>
+                </Border>
+
+                <!-- Name -->
+                <TextBlock Margin="5 0"
+               Text="{Binding Monster.Name}"
+               FontSize="18"
+               FontFamily="{StaticResource CinzelFont}"
+               TextAlignment="Center"
+               TextWrapping="Wrap"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </UserControl>
