@@ -265,6 +265,7 @@
     <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Black.ttf" />
     <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Bold.ttf" />
     <Resource Include="fonts\Cinzel_Decorative\CinzelDecorative-Regular.ttf" />
+    <Resource Include="fonts\Mansalva\Mansalva-Regular.ttf" />
     <None Include="packages.config" />
     <None Include="pol_arcaneDataSet.xsc">
       <DependentUpon>pol_arcaneDataSet.xsd</DependentUpon>
@@ -350,6 +351,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="fonts\Cinzel_Decorative\OFL.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="fonts\Mansalva\OFL.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
