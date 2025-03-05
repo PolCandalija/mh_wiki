@@ -45,9 +45,11 @@ namespace mh.viewModel
         }
         private void MonsterDetails(object obj)
         {
-            if (obj is int id)
+            if (obj is string id)
             {
-                CurrentView = new MonsterDetails(id);
+                int _id = Convert.ToInt32(id);
+
+                CurrentView = new MonsterDetails(_id);
             }
         }
 

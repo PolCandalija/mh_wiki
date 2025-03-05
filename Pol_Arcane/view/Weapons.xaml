@@ -8,12 +8,12 @@
              xmlns:vm="clr-namespace:mh.viewModel"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    
+
+
     <UserControl.DataContext>
         <vm:NavigationVM/>
     </UserControl.DataContext>
-   
+
     <UserControl.Resources>
         <ResourceDictionary Source="/styles/MyButton.xaml"/>
     </UserControl.Resources>
@@ -36,8 +36,8 @@ CornerRadius="0,20,20,0">
 
                 <Border Margin="0" Width="160" Height="120">
                     <!-- Great Sword -->
-                    <Button CommandParameter="1" 
-                            Command="{Binding DataContext.MonsterDetailsCommand, 
+                    <Button CommandParameter="Great Sword" 
+                            Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
