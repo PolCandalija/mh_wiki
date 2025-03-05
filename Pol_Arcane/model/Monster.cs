@@ -15,6 +15,8 @@ namespace mh.model
         public int ArmorId { get; set; }
         public int WeaponId { get; set; }
         public string Description { get; set; }
+        public string Element { get; set; }
+        public string Ailment { get; set; }
         public int FireRes { get; set; }
         public int WaterRes { get; set; }
         public int IceRes { get; set; }

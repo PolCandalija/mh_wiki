@@ -32,6 +32,8 @@ namespace mh.viewModel
                     ArmorId = Convert.ToInt32(dr["ArmorId"]),
                     WeaponId = Convert.ToInt32(dr["WeaponId"]),
                     Description = Convert.ToString(dr["Description"]),
+                    Element = Convert.ToString(dr["Element"]),
+                    Ailment = Convert.ToString(dr["Ailment"]),
                     FireRes = Convert.ToInt32(dr["FireRes"]),
                     WaterRes = Convert.ToInt32(dr["WaterRes"]),
                     IceRes = Convert.ToInt32(dr["IceRes"]),
