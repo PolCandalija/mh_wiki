@@ -9,11 +9,11 @@ namespace mh.viewModel
     public class MonstersVM : utilites.ViewModelBase
     {
         public static string DBTable = "Monster";
-        public ObservableCollection<Monster> Monster_List { get; set; }
+        public ObservableCollection<Monster> Monsters { get; set; }
 
         public MonstersVM()
         {
-            Monster_List = new ObservableCollection<Monster>();
+            Monsters = new ObservableCollection<Monster>();
             LoadMonsters();
         }
 
@@ -43,7 +43,7 @@ namespace mh.viewModel
                     IconUrl = Convert.ToString(dr["IconUrl"])
                 };
 
-                Monster_List.Add(monster);
+                Monsters.Add(monster);
             }
         }
     }

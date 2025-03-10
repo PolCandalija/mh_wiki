@@ -18,7 +18,7 @@
                       Background="Transparent" Width="680" Height="474"
                       VerticalScrollBarVisibility="Hidden">
             <StackPanel Margin="0 0" HorizontalAlignment="Center">
-                <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Monster_List}">
+                <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Monsters}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <!-- Monster -->

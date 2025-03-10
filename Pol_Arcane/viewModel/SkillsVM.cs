@@ -6,7 +6,7 @@ using mh.model;
 
 namespace mh.viewModel
 {
-    internal class SkillsVM : utilites.ViewModelBase
+    public class SkillsVM : utilites.ViewModelBase
     {
         public static string DBTable = "Skill";
         public ObservableCollection<Skill> Skills { get; set; }

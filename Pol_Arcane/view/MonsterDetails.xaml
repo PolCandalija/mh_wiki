@@ -102,7 +102,7 @@ CornerRadius="0,20,20,0">
                            Foreground="Gray"/>
                 <!-- Weaknesses -->
                 <TextBlock Margin="0 5 0 0"
-                           Text="Weaknesses:"
+                           Text="Resistances:"
                            FontSize="18"
                            FontFamily="{StaticResource CinzelFont}"
                            TextAlignment="Left"

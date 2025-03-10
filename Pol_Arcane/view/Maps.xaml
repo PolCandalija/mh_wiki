@@ -8,8 +8,80 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border Background="Transparent"
-CornerRadius="0,20,20,0">
+            CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+
+        <!-- Scroll -->
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
+                      Background="Transparent" Width="680" Height="474"
+                      VerticalScrollBarVisibility="Hidden">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center">
+                <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Maps}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Map -->
+                            <Border Margin="10 5 10 5" Width="320" Height="600">
+
+                                <StackPanel>
+
+                                    <!-- Icon -->
+                                    <Border Width="300" Height="300" CornerRadius="5" Margin="5">
+                                        <Image Source="{Binding IconUrl}"/>
+                                        <Border.BitmapEffect>
+                                            <DropShadowBitmapEffect ShadowDepth="10"/>
+                                        </Border.BitmapEffect>
+                                    </Border>
+
+                                    <!-- Name -->
+                                    <TextBlock Margin="0 5 0 0"
+                                               Text="{Binding Name}"
+                                               FontSize="22"
+                                               FontFamily="{StaticResource CinzelFont}"
+                                               TextAlignment="Center"
+                                               TextWrapping="Wrap"/>
+                                    
+                                    <!-- Zones -->
+                                    <TextBlock Margin="0 20 0 0"
+                                               Text="Zones:"
+                                               FontSize="18"
+                                               FontFamily="{StaticResource CinzelFont}"
+                                               TextAlignment="Center"
+                                               TextWrapping="Wrap"/>
+
+                                    <TextBlock Margin="0 5 0 0"
+                                               Text="{Binding NumberOfZones}"
+                                               FontSize="25"
+                                               FontFamily="{StaticResource HrFont}"
+                                               TextAlignment="Center"
+                                               TextWrapping="Wrap"
+                                               Foreground="Gray"/>
+                                    
+                                    <!-- Description -->
+                                    <TextBlock Margin="0 5 0 0"
+                                               Text="Description:"
+                                               FontSize="18"
+                                               FontFamily="{StaticResource CinzelFont}"
+                                               TextAlignment="Left"
+                                               TextWrapping="Wrap"/>
+                                    <TextBlock Margin="0 5 0 0"
+                                               Text="{Binding Description}"
+                                               FontSize="16"
+                                               FontFamily="{StaticResource CinzelFont}"
+                                               TextAlignment="Left"
+                                               TextWrapping="Wrap"
+                                               Foreground="Gray"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

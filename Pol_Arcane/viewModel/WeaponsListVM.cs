@@ -1,12 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using System.Data;
 using System;
-using System.Windows.Input;
 using mh.datasource;
 using mh.model;
-using mh.view;
-using mh.viewModel;
-using System.Diagnostics;
 
 namespace mh.viewModel
 {
