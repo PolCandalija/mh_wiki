@@ -9,6 +9,7 @@ namespace mh.model
     public class Armor
     {
         public int _Id { get; set; }
+        public string Name { get; set; }
         public int Defense { get; set; }
         public int FireRes { get; set; }
         public int WaterRes { get; set; }

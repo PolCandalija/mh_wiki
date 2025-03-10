@@ -120,6 +120,7 @@ namespace mh.viewModel
                 Armor = new Armor
                 {
                     _Id = Convert.ToInt32(monsters[0]["_Id"]),
+                    Name = Convert.ToString(monsters[0]["Name"]),
                     Defense = Convert.ToInt32(monsters[0]["Defense"]),
                     FireRes = Convert.ToInt32(monsters[0]["FireRes"]),
                     WaterRes = Convert.ToInt32(monsters[0]["WaterRes"]),
@@ -135,6 +136,7 @@ namespace mh.viewModel
                 Armor = new Armor
                 {
                     _Id = -999,
+                    Name = "Unknown",
                     Defense = -999,
                     FireRes = -999,
                     WaterRes = -999,
