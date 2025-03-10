@@ -16,6 +16,7 @@
                 <ResourceDictionary Source="utilites/DataTemplate.xaml" />
                 <ResourceDictionary Source="styles/MyFont.xaml" />
                 <ResourceDictionary Source="styles/MyButton.xaml" />
+                <ResourceDictionary Source="styles/HrFont.xaml" />
 
 
             </ResourceDictionary.MergedDictionaries>

@@ -28,7 +28,7 @@ CornerRadius="0,20,20,0">
             <StackPanel Grid.Column="0">
 
                 <!-- Icon -->
-                <Border Width="200" Height="200" CornerRadius="5" Margin="5">
+                <Border Width="150" Height="150" CornerRadius="5" Margin="5">
                     <Image Source="{Binding Monster.IconUrl}"/>
                     <Border.BitmapEffect>
                         <DropShadowBitmapEffect ShadowDepth="3"/>
@@ -36,14 +36,24 @@ CornerRadius="0,20,20,0">
                 </Border>
 
                 <!-- Name -->
-                <TextBlock Margin="0 10 0 0"
+                <TextBlock Margin="0 7 0 0"
                            Text="{Binding Monster.Name}"
                            FontSize="22"
                            FontFamily="{StaticResource CinzelFont}"
                            TextAlignment="Center"
                            TextWrapping="Wrap"/>
+                <!-- Hr -->
+                <TextBlock Margin="0 0 0 0"
+                           Text="{Binding Monster.Hr}"
+                           FontSize="60"
+                           Foreground="DarkRed"
+                           FontFamily="{StaticResource HrFont}"
+                           TextAlignment="Center"
+                           TextWrapping="Wrap"
+                           VerticalAlignment="Top"
+                           FontWeight="Bold"/>
                 <!-- Description -->
-                <TextBlock Margin="0 20 0 0"
+                <TextBlock Margin="0 0 0 0"
                            TextAlignment="Center"
                            Text="{Binding Monster.Description}"
                            FontSize="16"
@@ -117,7 +127,7 @@ CornerRadius="0,20,20,0">
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.FireRes}"
                                FontSize="18"
-                               FontFamily="{StaticResource CinzelFont}"
+                               FontFamily="{StaticResource HrFont}"
                                TextAlignment="Left"
                                TextWrapping="Wrap"
                                Foreground="Red"/>
@@ -136,7 +146,7 @@ CornerRadius="0,20,20,0">
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.WaterRes}"
                                FontSize="18"
-                               FontFamily="{StaticResource CinzelFont}"
+                               FontFamily="{StaticResource HrFont}"
                                TextAlignment="Left"
                                TextWrapping="Wrap"
                                Foreground="CadetBlue"/>
@@ -155,7 +165,7 @@ CornerRadius="0,20,20,0">
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.IceRes}"
                                FontSize="18"
-                               FontFamily="{StaticResource CinzelFont}"
+                               FontFamily="{StaticResource HrFont}"
                                TextAlignment="Left"
                                TextWrapping="Wrap"
                                Foreground="Gray"/>
@@ -174,7 +184,7 @@ CornerRadius="0,20,20,0">
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.ThunderRes}"
                                FontSize="18"
-                               FontFamily="{StaticResource CinzelFont}"
+                               FontFamily="{StaticResource HrFont}"
                                TextAlignment="Left"
                                TextWrapping="Wrap"
                                Foreground="#aaaf03"/>
@@ -193,7 +203,7 @@ CornerRadius="0,20,20,0">
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.DragonRes}"
                                FontSize="18"
-                               FontFamily="{StaticResource CinzelFont}"
+                               FontFamily="{StaticResource HrFont}"
                                TextAlignment="Left"
                                TextWrapping="Wrap"
                                Foreground="Purple"/>
