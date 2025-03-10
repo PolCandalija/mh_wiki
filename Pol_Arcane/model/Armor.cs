@@ -18,5 +18,11 @@ namespace mh.model
         public int DragonRes { get; set; }
         public int Sockets { get; set; }
         public int SkillId { get; set; }
+        public string HeadIconUrl { get; set; }
+        public string ChestIconUrl { get; set; }
+        public string ArmsIconUrl { get; set; }
+        public string WaistIconUrl { get; set; }
+        public string LegIconUrl { get; set; }
+        public Skill SetSkill { get; set; }
     }
 }

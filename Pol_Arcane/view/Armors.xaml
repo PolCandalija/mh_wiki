@@ -8,8 +8,267 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Border Background="Transparent"
-CornerRadius="0,20,20,0">
+        CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+
+        <!-- Scroll -->
+        <ScrollViewer HorizontalAlignment="Center" VerticalAlignment="Center"
+                  Background="Transparent" Width="650" Height="474"
+                  VerticalScrollBarVisibility="Hidden">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center">
+                <ItemsControl x:Name="ListViewMonsters" ItemsSource="{Binding Armors}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <!-- Armor -->
+                            <Border Margin="0 10 0 10" Width="650" Height="385">
+                                <StackPanel HorizontalAlignment="Center">
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <!-- HeadIcon -->
+                                        <Border Width="110" Height="110" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding HeadIconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
+                                        <!-- ChestIcon -->
+                                        <Border Width="110" Height="110" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding ChestIconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
+                                        <!-- ArmsIcon -->
+                                        <Border Width="110" Height="110" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding ArmsIconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
+                                        <!-- WaistIcon -->
+                                        <Border Width="110" Height="110" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding WaistIconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
+                                        <!-- LegsIcon -->
+                                        <Border Width="110" Height="110" CornerRadius="5" Margin="5">
+                                            <Image Source="{Binding LegIconUrl}"/>
+                                            <Border.BitmapEffect>
+                                                <DropShadowBitmapEffect ShadowDepth="10"/>
+                                            </Border.BitmapEffect>
+                                        </Border>
+                                    </StackPanel>
+                                    
+                                    
+                                    
+                                    
+
+                                    <!-- Name -->
+                                    <TextBlock Margin="0 20 0 10"
+                                               Text="{Binding Name}"
+                                               FontSize="22"
+                                               FontFamily="{StaticResource CinzelFont}"
+                                               TextAlignment="Center"
+                                               TextWrapping="Wrap"/>
+                                    
+                                    
+                                    
+                                    
+
+                                    <!-- Resistances -->
+                                    <TextBlock Margin="0 20 0 10"
+                                                   Text="Elemental resistances:"
+                                                   FontSize="18"
+                                                   FontFamily="{StaticResource CinzelFont}"
+                                                   TextAlignment="Left"
+                                                   TextWrapping="Wrap"/>
+                                    <!-- Stats -->
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                                        <!-- FrieRes -->
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                            <Border Width="40" Height="40">
+                                                <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/a/a8/StatusEffect-Fire_Res_S_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224855"/>
+                                                <Border.BitmapEffect>
+                                                    <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                </Border.BitmapEffect>
+                                            </Border>
+
+                                            <Viewbox Width="30"></Viewbox>
+
+                                            <TextBlock Margin="0 5 0 0"
+                                                       Text="{Binding FireRes}"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource HrFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="Red"/>
+                                        </StackPanel>
+                                        <!-- WatereRes -->
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                            <Border Width="40" Height="40">
+                                                <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/2/2b/StatusEffect-Water_Res_S_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224857"/>
+                                                <Border.BitmapEffect>
+                                                    <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                </Border.BitmapEffect>
+                                            </Border>
+
+                                            <Viewbox Width="30"></Viewbox>
+
+                                            <TextBlock Margin="0 5 0 0"
+                                                       Text="{Binding WaterRes}"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource HrFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="CadetBlue"/>
+                                        </StackPanel>
+                                        <!-- IceRes -->
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                            <Border Width="40" Height="40">
+                                                <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/a/a6/StatusEffect-Ice_Res_S_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224855"/>
+                                                <Border.BitmapEffect>
+                                                    <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                </Border.BitmapEffect>
+                                            </Border>
+
+                                            <Viewbox Width="30"></Viewbox>
+
+                                            <TextBlock Margin="0 5 0 0"
+                                                       Text="{Binding IceRes}"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource HrFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="Gray"/>
+                                        </StackPanel>
+                                        <!-- ThundereRes -->
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                            <Border Width="40" Height="40">
+                                                <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/d/da/StatusEffect-Thunder_Res_S_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224857"/>
+                                                <Border.BitmapEffect>
+                                                    <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                </Border.BitmapEffect>
+                                            </Border>
+
+                                            <Viewbox Width="30"></Viewbox>
+
+                                            <TextBlock Margin="0 5 0 0"
+                                                       Text="{Binding ThunderRes}"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource HrFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="#aaaf03"/>
+                                        </StackPanel>
+                                        <!-- DragonRes -->
+                                        <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                            <Border Width="40" Height="40">
+                                                <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/c/cb/StatusEffect-Dragon_Res_S_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224854"/>
+                                                <Border.BitmapEffect>
+                                                    <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                </Border.BitmapEffect>
+                                            </Border>
+
+                                            <Viewbox Width="30"></Viewbox>
+
+                                            <TextBlock Margin="0 5 0 0"
+                                                       Text="{Binding DragonRes}"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource HrFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"
+                                                       Foreground="Purple"/>
+                                        </StackPanel>
+                                    </StackPanel>
+
+                                    <StackPanel Orientation="Horizontal">
+                                        <!-- Defense -->
+                                        <StackPanel>
+                                            <TextBlock Margin="0 20 0 10"
+               Text="Defense:"
+               FontSize="18"
+               FontFamily="{StaticResource CinzelFont}"
+               TextAlignment="Left"
+               TextWrapping="Wrap"/>
+
+
+                                            <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                                <Border Width="40" Height="40">
+                                                    <Image Source="https://static.wikia.nocookie.net/monsterhunter/images/1/12/StatusEffect-Defense_Up_Icon_MHWI.svg/revision/latest/scale-to-width-down/40?cb=20220803224853"/>
+                                                    <Border.BitmapEffect>
+                                                        <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                    </Border.BitmapEffect>
+                                                </Border>
+
+                                                <Viewbox Width="30"></Viewbox>
+
+                                                <TextBlock Margin="0 5 0 0"
+                   Text="{Binding Defense}"
+                   FontSize="18"
+                   FontFamily="{StaticResource HrFont}"
+                   TextAlignment="Left"
+                   TextWrapping="Wrap"
+                   Foreground="Gray"/>
+                                            </StackPanel>
+                                        </StackPanel>
+
+
+
+
+
+
+
+                                        <!-- SetSkill -->
+                                        <StackPanel>
+                                            <TextBlock Margin="0 20 0 10"
+               Text="Set skill:"
+               FontSize="18"
+               FontFamily="{StaticResource CinzelFont}"
+               TextAlignment="Left"
+               TextWrapping="Wrap"/>
+
+
+                                            <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
+                                                <Border Width="40" Height="40">
+                                                    <Image Source="{Binding SetSkill.IconUrl}"/>
+                                                    <Border.BitmapEffect>
+                                                        <DropShadowBitmapEffect ShadowDepth="1"/>
+                                                    </Border.BitmapEffect>
+                                                </Border>
+
+                                                <Viewbox Width="30"></Viewbox>
+
+                                                <TextBlock Margin="0 5 0 0"
+                   Text="{Binding SetSkill.Name}"
+                   FontSize="18"
+                   FontFamily="{StaticResource HrFont}"
+                   TextAlignment="Left"
+                   TextWrapping="Wrap"
+                   Foreground="Gray"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

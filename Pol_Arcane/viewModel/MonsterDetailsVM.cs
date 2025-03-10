@@ -73,20 +73,20 @@ namespace mh.viewModel
         private void LoadWeapon(int id)
         {
             DataTable dt = DBDatasource.GetDataById(WeaponsVM.DBTable, id);
-            DataRowCollection monsters = dt.Rows;
+            DataRowCollection weapons = dt.Rows;
 
-            if (monsters.Count > 0)
+            if (weapons.Count > 0)
             {
                 Weapon = new Weapon
                 {
-                    _Id = Convert.ToInt32(monsters[0]["_Id"]),
-                    Name = Convert.ToString(monsters[0]["Name"]),
-                    RawDamage = Convert.ToInt32(monsters[0]["RawDamage"]),
-                    Element = Convert.ToString(monsters[0]["Element"]),
-                    ElementDamage = Convert.ToInt32(monsters[0]["ElementDamage"]),
-                    Sharpness = Convert.ToString(monsters[0]["Sharpness"]),
-                    Type = Convert.ToString(monsters[0]["Type"]),
-                    IconUrl = Convert.ToString(monsters[0]["IconUrl"])
+                    _Id = Convert.ToInt32(weapons[0]["_Id"]),
+                    Name = Convert.ToString(weapons[0]["Name"]),
+                    RawDamage = Convert.ToInt32(weapons[0]["RawDamage"]),
+                    Element = Convert.ToString(weapons[0]["Element"]),
+                    ElementDamage = Convert.ToInt32(weapons[0]["ElementDamage"]),
+                    Sharpness = Convert.ToString(weapons[0]["Sharpness"]),
+                    Type = Convert.ToString(weapons[0]["Type"]),
+                    IconUrl = Convert.ToString(weapons[0]["IconUrl"])
                 };
             }
             else
@@ -107,22 +107,22 @@ namespace mh.viewModel
         private void LoadArmor(int id)
         {
             DataTable dt = DBDatasource.GetDataById(ArmorsVM.DBTable, id);
-            DataRowCollection monsters = dt.Rows;
+            DataRowCollection armors = dt.Rows;
 
-            if (monsters.Count > 0)
+            if (armors.Count > 0)
             {
                 Armor = new Armor
                 {
-                    _Id = Convert.ToInt32(monsters[0]["_Id"]),
-                    Name = Convert.ToString(monsters[0]["Name"]),
-                    Defense = Convert.ToInt32(monsters[0]["Defense"]),
-                    FireRes = Convert.ToInt32(monsters[0]["FireRes"]),
-                    WaterRes = Convert.ToInt32(monsters[0]["WaterRes"]),
-                    IceRes = Convert.ToInt32(monsters[0]["IceRes"]),
-                    ThunderRes = Convert.ToInt32(monsters[0]["ThunderRes"]),
-                    DragonRes = Convert.ToInt32(monsters[0]["DragonRes"]),
-                    Sockets = Convert.ToInt32(monsters[0]["Sockets"]),
-                    SkillId = Convert.ToInt32(monsters[0]["SkillId"]),
+                    _Id = Convert.ToInt32(armors[0]["_Id"]),
+                    Name = Convert.ToString(armors[0]["Name"]),
+                    Defense = Convert.ToInt32(armors[0]["Defense"]),
+                    FireRes = Convert.ToInt32(armors[0]["FireRes"]),
+                    WaterRes = Convert.ToInt32(armors[0]["WaterRes"]),
+                    IceRes = Convert.ToInt32(armors[0]["IceRes"]),
+                    ThunderRes = Convert.ToInt32(armors[0]["ThunderRes"]),
+                    DragonRes = Convert.ToInt32(armors[0]["DragonRes"]),
+                    Sockets = Convert.ToInt32(armors[0]["Sockets"]),
+                    SkillId = Convert.ToInt32(armors[0]["SkillId"]),
                 };
             }
             else
@@ -145,17 +145,17 @@ namespace mh.viewModel
         private void LoadMap(int id)
         {
             DataTable dt = DBDatasource.GetDataById(MapsVM.DBTable, id);
-            DataRowCollection monsters = dt.Rows;
+            DataRowCollection maps = dt.Rows;
 
-            if (monsters.Count > 0)
+            if (maps.Count > 0)
             {
                 Map = new Map
                 {
-                    _Id = Convert.ToInt32(monsters[0]["_Id"]),
-                    Name = Convert.ToString(monsters[0]["Name"]),
-                    Description = Convert.ToString(monsters[0]["Description"]),
-                    NumberOfZones = Convert.ToInt32(monsters[0]["NumberOfZones"]),
-                    IconUrl = Convert.ToString(monsters[0]["IconUrl"])
+                    _Id = Convert.ToInt32(maps[0]["_Id"]),
+                    Name = Convert.ToString(maps[0]["Name"]),
+                    Description = Convert.ToString(maps[0]["Description"]),
+                    NumberOfZones = Convert.ToInt32(maps[0]["NumberOfZones"]),
+                    IconUrl = Convert.ToString(maps[0]["IconUrl"])
                 };
             }
             else
@@ -173,17 +173,17 @@ namespace mh.viewModel
         private void LoadSkill(int id)
         {
             DataTable dt = DBDatasource.GetDataById(SkillsVM.DBTable, id);
-            DataRowCollection monsters = dt.Rows;
+            DataRowCollection skills = dt.Rows;
 
-            if (monsters.Count > 0)
+            if (skills.Count > 0)
             {
                 Skill = new Skill
                 {
-                    _Id = Convert.ToInt32(monsters[0]["_Id"]),
-                    Name = Convert.ToString(monsters[0]["Name"]),
-                    Levels = Convert.ToInt32(monsters[0]["Levels"]),
-                    Description = Convert.ToString(monsters[0]["Description"]),
-                    IconUrl = Convert.ToString(monsters[0]["IconUrl"])
+                    _Id = Convert.ToInt32(skills[0]["_Id"]),
+                    Name = Convert.ToString(skills[0]["Name"]),
+                    Levels = Convert.ToInt32(skills[0]["Levels"]),
+                    Description = Convert.ToString(skills[0]["Description"]),
+                    IconUrl = Convert.ToString(skills[0]["IconUrl"])
                 };
             }
             else

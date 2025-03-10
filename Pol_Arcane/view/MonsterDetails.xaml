@@ -100,7 +100,7 @@ CornerRadius="0,20,20,0">
                            FontFamily="{StaticResource CinzelFont}"
                            TextWrapping="Wrap"
                            Foreground="Gray"/>
-                <!-- Weaknesses -->
+                <!-- Resistances -->
                 <TextBlock Margin="0 5 0 0"
                            Text="Resistances:"
                            FontSize="18"
