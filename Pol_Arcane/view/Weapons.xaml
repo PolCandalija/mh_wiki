@@ -29,19 +29,19 @@ CornerRadius="0,20,20,0">
             HorizontalAlignment="Center"
             Background="Transparent" 
             Width="750" 
-            Height="361">
+            Height="402">
 
             <!-- Row 1 -->
-            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="125" Orientation="Horizontal">
 
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <!-- Great Sword -->
                     <Button CommandParameter="Great Sword" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/c/c2/Great_Sword_Icon_White.png/revision/latest?cb=20160103031128"/>
                                 </Border.Background>
@@ -61,13 +61,13 @@ CornerRadius="0,20,20,0">
                     
                 </Border>
                 <!-- Sword and Shield -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Sword and Shield" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/e/e5/Sword_and_Shield_Icon_White.png/revision/latest?cb=20160103035907"/>
                                 </Border.Background>
@@ -86,13 +86,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- hammer -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Hammer" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/9/99/Hammer_Icon_White.png/revision/latest?cb=20160103031541"/>
                                 </Border.Background>
@@ -111,13 +111,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- dual blades -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Dual Blades" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/7/74/Dual_Blades_Icon_White.png/revision/latest?cb=20160103030339"/>
                                 </Border.Background>
@@ -141,16 +141,16 @@ CornerRadius="0,20,20,0">
             <!-- Row 2 -->
 
 
-            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="125" Orientation="Horizontal">
 
                 <!-- Long sword -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Long Sword" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/1/1e/Long_Sword_Icon_White.png/revision/latest?cb=20160103034950"/>
                                 </Border.Background>
@@ -169,13 +169,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- Lance -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Lance" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/0/0b/Lance_Icon_White.png/revision/latest?cb=20160103032841"/>
                                 </Border.Background>
@@ -194,13 +194,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- Switch axe -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Switch Axe" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/40/Switch_Axe_Icon_White.png/revision/latest?cb=20160103035713"/>
                                 </Border.Background>
@@ -219,13 +219,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- Charge blade -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Charge Blade" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/6/6c/Charge_Blade_Icon_White.png/revision/latest?cb=20160103031302"/>
                                 </Border.Background>
@@ -248,16 +248,16 @@ CornerRadius="0,20,20,0">
 
             <!-- Row 3 -->
 
-            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="120" Orientation="Horizontal">
+            <StackPanel Margin="0 0" HorizontalAlignment="Center" Width="650" Height="125" Orientation="Horizontal">
 
                 <!-- Insect claive -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Insect Glaive" 
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5" Margin="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/4/47/Insect_Glaive_Icon_White.png/revision/latest?cb=20160103032407"/>
                                 </Border.Background>
@@ -276,13 +276,13 @@ CornerRadius="0,20,20,0">
                     </Button>
                 </Border>
                 <!-- Bow -->
-                <Border Margin="0" Width="160" Height="120">
+                <Border Margin="0" Width="160" Height="125">
                     <Button CommandParameter="Bow"
                             Command="{Binding DataContext.WeaponsListCommand, 
                             RelativeSource={RelativeSource AncestorType=Window}}"
                             Style="{StaticResource MyButton}">
                         <StackPanel>
-                            <Border Width="80" Height="80" CornerRadius="5" Margin="5">
+                            <Border Width="75" Height="75" CornerRadius="5">
                                 <Border.Background>
                                     <ImageBrush ImageSource="https://static.wikia.nocookie.net/fanonmonsterhunter/images/a/a4/Bow_Icon_White.png/revision/latest?cb=20160103030106"/>
                                 </Border.Background>

@@ -67,7 +67,7 @@
                                     
 
                                     <!-- Name -->
-                                    <TextBlock Margin="0 20 0 10"
+                                    <TextBlock Margin="0 20 0 0"
                                                Text="{Binding Name}"
                                                FontSize="22"
                                                FontFamily="{StaticResource CinzelFont}"
