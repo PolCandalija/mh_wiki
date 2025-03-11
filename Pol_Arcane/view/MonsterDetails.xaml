@@ -13,9 +13,11 @@
     </UserControl.DataContext>
     <Grid>
         <Border Background="Transparent"
-CornerRadius="0,20,20,0">
+                CornerRadius="0,20,20,0">
             <Image Source="/images/section_bg.png" Stretch="Fill"/>
         </Border>
+        
+        
 
         <Grid Width="675" Margin="62,57,62,54">
             <Grid.ColumnDefinitions>
@@ -23,7 +25,7 @@ CornerRadius="0,20,20,0">
                 <ColumnDefinition Width="228"/>
                 <ColumnDefinition Width="228"/>
             </Grid.ColumnDefinitions>
-            
+
             <!-- Column 1 -->
             <StackPanel Grid.Column="0">
 
@@ -51,10 +53,10 @@ CornerRadius="0,20,20,0">
                            TextWrapping="Wrap"
                            Foreground="#474747"/>
             </StackPanel>
-            
-            
-            
-            
+
+
+
+
 
             <!-- Column 2 -->
             <StackPanel Grid.Column="1" Margin="35 0 0 0">
@@ -117,7 +119,7 @@ CornerRadius="0,20,20,0">
                     </Border>
 
                     <Viewbox Width="30"></Viewbox>
-                    
+
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.FireRes}"
                                FontSize="18"
@@ -155,7 +157,7 @@ CornerRadius="0,20,20,0">
                     </Border>
 
                     <Viewbox Width="30"></Viewbox>
-                    
+
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.IceRes}"
                                FontSize="18"
@@ -174,7 +176,7 @@ CornerRadius="0,20,20,0">
                     </Border>
 
                     <Viewbox Width="30"></Viewbox>
-                    
+
                     <TextBlock Margin="0 5 0 0"
                                Text="{Binding Monster.ThunderRes}"
                                FontSize="18"
@@ -269,5 +271,23 @@ CornerRadius="0,20,20,0">
                 </Border>
             </StackPanel>
         </Grid>
+
+        <Button Style="{StaticResource MyButton}"
+                Command="{Binding DataContext.MonsterCommand, 
+                RelativeSource={RelativeSource AncestorType=Window}}"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Left" 
+                Width="42"
+                Height="42"
+                Margin="15">
+
+            <Image Source="/images/back_arrow.png"
+                    Style="{StaticResource Image_Style}" 
+                     Height="30" 
+                    Width="30" 
+                     Margin="0,0,0,0" 
+                     VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" />
+        </Button>
     </Grid>
 </UserControl>

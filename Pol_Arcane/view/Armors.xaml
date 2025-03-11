@@ -188,11 +188,11 @@
                                         <!-- Defense -->
                                         <StackPanel>
                                             <TextBlock Margin="0 20 0 10"
-               Text="Defense:"
-               FontSize="18"
-               FontFamily="{StaticResource CinzelFont}"
-               TextAlignment="Left"
-               TextWrapping="Wrap"/>
+                                                       Text="Defense:"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource CinzelFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"/>
 
 
                                             <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
@@ -206,12 +206,12 @@
                                                 <Viewbox Width="30"></Viewbox>
 
                                                 <TextBlock Margin="0 5 0 0"
-                   Text="{Binding Defense}"
-                   FontSize="18"
-                   FontFamily="{StaticResource HrFont}"
-                   TextAlignment="Left"
-                   TextWrapping="Wrap"
-                   Foreground="Gray"/>
+                                                           Text="{Binding Defense}"
+                                                           FontSize="18"
+                                                           FontFamily="{StaticResource HrFont}"
+                                                           TextAlignment="Left"
+                                                           TextWrapping="Wrap"
+                                                           Foreground="Gray"/>
                                             </StackPanel>
                                         </StackPanel>
 
@@ -224,11 +224,11 @@
                                         <!-- SetSkill -->
                                         <StackPanel>
                                             <TextBlock Margin="0 20 0 10"
-               Text="Set skill:"
-               FontSize="18"
-               FontFamily="{StaticResource CinzelFont}"
-               TextAlignment="Left"
-               TextWrapping="Wrap"/>
+                                                       Text="Set skill:"
+                                                       FontSize="18"
+                                                       FontFamily="{StaticResource CinzelFont}"
+                                                       TextAlignment="Left"
+                                                       TextWrapping="Wrap"/>
 
 
                                             <StackPanel Orientation="Horizontal" Margin="0 5 30 0">
@@ -242,22 +242,15 @@
                                                 <Viewbox Width="30"></Viewbox>
 
                                                 <TextBlock Margin="0 5 0 0"
-                   Text="{Binding SetSkill.Name}"
-                   FontSize="18"
-                   FontFamily="{StaticResource HrFont}"
-                   TextAlignment="Left"
-                   TextWrapping="Wrap"
-                   Foreground="Gray"/>
+                                                           Text="{Binding SetSkill.Name}"
+                                                           FontSize="18"
+                                                           FontFamily="{StaticResource HrFont}"
+                                                           TextAlignment="Left"
+                                                           TextWrapping="Wrap"
+                                                           Foreground="Gray"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </StackPanel>
-                                    
-                                    
-                                    
-                                    
-                                    
-                                    
-
                                 </StackPanel>
                             </Border>
                         </DataTemplate>
@@ -270,5 +263,23 @@
                 </ItemsControl>
             </StackPanel>
         </ScrollViewer>
+
+        <Button Style="{StaticResource MyButton}"
+        Command="{Binding DataContext.HomeCommand, 
+        RelativeSource={RelativeSource AncestorType=Window}}"
+          VerticalAlignment="Top"
+          HorizontalAlignment="Left" 
+        Width="42"
+        Height="42"
+        Margin="15">
+
+            <Image Source="/images/back_arrow.png"
+        Style="{StaticResource Image_Style}" 
+         Height="30" 
+        Width="30" 
+         Margin="0,0,0,0" 
+         VerticalAlignment="Center" 
+        HorizontalAlignment="Center" />
+        </Button>
     </Grid>
 </UserControl>

@@ -359,5 +359,8 @@
   <ItemGroup>
     <Resource Include="fonts\Mansalva\OFL.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\back_arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
