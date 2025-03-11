@@ -324,14 +324,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\shutdown_def.png" />
-    <Resource Include="images\shutdown_mo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\main_menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\mh-home.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\mh_logo.png" />
@@ -361,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\back_arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\mtigrex.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
