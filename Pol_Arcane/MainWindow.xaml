@@ -61,7 +61,9 @@
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
                                           Command="{Binding HomeCommand}"
-                                          IsChecked="True">
+                                          IsChecked="True"
+                                          Click="Menu_Main"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
                                         <Image Source="/images/mh_logo.png" Margin="0,-77,0,0"/>
@@ -75,7 +77,9 @@
 
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                                    Command="{Binding MonsterCommand}">
+                                    Command="{Binding MonsterCommand}"
+                                          Click="Menu_Normal"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
 
@@ -98,7 +102,9 @@
 
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                                    Command="{Binding WeaponCommand}">
+                                    Command="{Binding WeaponCommand}"
+                                          Click="Menu_Normal"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
 
@@ -119,7 +125,9 @@
 
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                                    Command="{Binding ArmorCommand}">
+                                    Command="{Binding ArmorCommand}"
+                                          Click="Menu_Normal"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
 
@@ -140,7 +148,9 @@
 
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                                    Command="{Binding SkillCommand}">
+                                    Command="{Binding SkillCommand}"
+                                          Click="Menu_Normal"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
 
@@ -161,7 +171,9 @@
 
                             <Grid>
                                 <Menu:Btn Style="{StaticResource BtnStyle}"
-                                    Command="{Binding MapCommand}">
+                                    Command="{Binding MapCommand}"
+                                          Click="Menu_Normal"
+                                          MouseEnter="Menu_Hover">
 
                                     <Grid>
 
