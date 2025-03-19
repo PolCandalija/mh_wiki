@@ -90,7 +90,9 @@
           HorizontalAlignment="Left" 
         Width="42"
         Height="42"
-        Margin="15">
+        Margin="15"
+                Click="Back_Click"
+                MouseEnter="Back_Enter">
 
             <Image Source="/images/back_arrow.png"
         Style="{StaticResource Image_Style}" 

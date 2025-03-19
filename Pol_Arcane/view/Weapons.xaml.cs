@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using mh;
+using mh.datasource;
 
 namespace mh.view
 {
@@ -24,6 +25,30 @@ namespace mh.view
         public Weapons()
         {
             InitializeComponent();
+        }
+
+        private void Weapon_Click(object sender, RoutedEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.armor);
+        }
+
+        private void Weapon_Enter(object sender, MouseEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuHover);
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuNormal);
+        }
+
+        private void Back_Enter(object sender, MouseEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuHover);
+        }
+        private void Play_rare(object sender, RoutedEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.rare);
         }
     }
 }

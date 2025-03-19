@@ -28,9 +28,7 @@ namespace mh
         public MainWindow()
         {
             InitializeComponent();
-
-            MhSounds.bgMusic.Load();
-            MhSounds.bgMusic.PlayLooping();
+            MhSounds.PlayBackgroundMusic();
         }
 
         private void CloseApp_Click(object sender, RoutedEventArgs e)
@@ -48,9 +46,7 @@ namespace mh
 
         private void Menu_Normal(object sender, RoutedEventArgs e)
         {
-            MhSounds.menuNormal.Stop();
-            MhSounds.menuNormal.Load();
-            MhSounds.menuNormal.Play();
+            MhSounds.PlaySound(MhSounds.menuNormal);
         }
 
         private void md_menu_normal(object sender, MouseButtonEventArgs e)
@@ -59,9 +55,7 @@ namespace mh
 
         private void Menu_Hover(object sender, MouseEventArgs e)
         {
-            MhSounds.menuHover.Stop();
-            MhSounds.menuHover.Load();
-            MhSounds.menuHover.Play();
+            MhSounds.PlaySound(MhSounds.menuHover);
         }
 
         private void Btn_MouseEnter(object sender, MouseEventArgs e)
@@ -71,9 +65,10 @@ namespace mh
 
         private void Menu_Main(object sender, RoutedEventArgs e)
         {
-            MhSounds.menuMain.Stop();
-            MhSounds.menuMain.Load();
-            MhSounds.menuMain.Play();
+            MhSounds.PlaySound(MhSounds.menuMain);
+        }
+        private void Close_App(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

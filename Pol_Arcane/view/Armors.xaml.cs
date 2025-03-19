@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mh.datasource;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace mh.view
         public Armors()
         {
             InitializeComponent();
+        }
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuNormal);
+
+        }
+
+        private void Back_Enter(object sender, MouseEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuHover);
+
         }
     }
 }

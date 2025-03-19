@@ -1,5 +1,8 @@
-﻿using mh.viewModel;
+﻿using mh.datasource;
+using mh.viewModel;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace mh.view
 {
@@ -11,5 +14,15 @@ namespace mh.view
 
             DataContext = new SkillsVM();
         }
-    }
+    
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuNormal);
+        }
+
+        private void Back_Enter(object sender, MouseEventArgs e)
+        {
+            MhSounds.PlaySound(MhSounds.menuHover);
+        }
+    } 
 }

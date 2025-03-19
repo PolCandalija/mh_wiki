@@ -356,24 +356,13 @@
   <ItemGroup>
     <Resource Include="images\back_arrow.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="images\mtigrex.jpg" />
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="sounds\mh_armor1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sounds\mh_armor2.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="images\mh-home.jpg" />
     <Content Include="sounds\mh_armor3.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\mh_bg_music.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sounds\mh_depart.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\mh_menu_main.wav">
@@ -386,12 +375,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\mh_rare.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sounds\mh_weapon1.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sounds\mh_weapon2.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="sounds\mh_weapon3.wav">
