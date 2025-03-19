@@ -27,6 +27,7 @@ namespace mh
         //test
         public MainWindow()
         {
+            DBDatasource.DBConnection.Open();
             InitializeComponent();
             MhSounds.PlayBackgroundMusic();
         }
