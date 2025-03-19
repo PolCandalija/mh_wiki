@@ -11,7 +11,7 @@ namespace mh.datasource
 {
     public static class MhSounds
     {
-        public static MediaPlayer menuHover = CreateMediaPlayer(@"sounds\mh_menu_hover.wav", 0.05);
+        public static MediaPlayer menuHover = CreateMediaPlayer(@"sounds\mh_menu_hover.wav", 0.1);
         public static MediaPlayer menuNormal = CreateMediaPlayer(@"sounds\mh_menu_normal.wav", 0.3);
         public static MediaPlayer menuMain = CreateMediaPlayer(@"sounds\mh_menu_main.wav", 0.3);
         public static MediaPlayer rare = CreateMediaPlayer(@"sounds\mh_rare.wav", 0.3);
@@ -20,7 +20,7 @@ namespace mh.datasource
         public static MediaPlayer bgMusic = new MediaPlayer();
         static MhSounds()
         {
-            SetupBackgroundMusic(@"sounds\mh_bg_music.wav", 0.25);
+            SetupBackgroundMusic(@"sounds\mh_bg_music.wav", 0.2);
         }
 
         private static MediaPlayer CreateMediaPlayer(string path, double volume)
